@@ -1,11 +1,11 @@
-const { default: styled } = require('styled-components');
+const { default: styled } = require("styled-components");
 
 export const DataUiComponnet = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2.5rem;
 `;
 
 export const HistoryCellWrapper = styled.div`
@@ -23,29 +23,29 @@ export const HistoryCellWrapper = styled.div`
     justify-content: space-between;
   }
 
-  @media (min-width: 600px) {
+  @media (max-width: 600px) {
     flex-direction: row;
-    gap: 5rem;
+    gap: 15rem;
   }
 `;
 
 export const DataUiWrapper = styled.div`
   height: 10rem;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   flex-grow: 1;
-  width: 75svw;
+  width: 75vw;
   height: 14rem;
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 
   input {
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
-      'Helvetica Neue', sans-serif;
+      "Helvetica Neue", sans-serif;
   }
 `;
 
@@ -78,7 +78,7 @@ export const Button = styled.button`
   cursor: pointer;
   display: inline-block;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
-    'Helvetica Neue', sans-serif;
+    "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
@@ -136,7 +136,7 @@ export const ContentData = styled.div`
 
 export const CustomSearchInput = styled.input`
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
-    'Helvetica Neue', sans-serif;
+    "Helvetica Neue", sans-serif;
   padding: 4px;
   border: 0;
   outline: 0;

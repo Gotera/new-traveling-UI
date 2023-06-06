@@ -20,11 +20,11 @@ export const JorneyFormWrapper = styled.div`
     display: flex;
     flex-direction: row;
     padding-top: 2rem;
+    
     justify-content: center;
     gap: 1.5rem;
     align-items: center;
     flex-wrap: wrap;
-
     @media (max-width: 600px) {
       flex-direction: column;
       flex-wrap: wrap;
@@ -58,7 +58,7 @@ export const Input = styled.input`
 export const Button = styled.button`
   align-items: center;
   background-clip: padding-box;
-  background-color: #fa6400;
+  background-color: var(--lightierBlue);
   border: 1px solid transparent;
   border-radius: 0.25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;

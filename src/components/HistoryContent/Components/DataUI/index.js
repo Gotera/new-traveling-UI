@@ -28,7 +28,7 @@ function DataUI() {
   const [text, setText] = useState("");
   const api = `${process.env.REACT_APP_API_URL}/travels/`;
 
-  const axiosItems = async (page, place) => {
+  const axiosItems = async (page, _place) => {
     const response = await axios.get(`${api}search?page=${page}&place=${text}`);
     setItems(response.data.result);
     setQtPags(response.data.count);
@@ -36,7 +36,7 @@ function DataUI() {
 
   useEffect(() => {
     axiosItems(currentPage);
-  }, [currentPage, text]);
+  }, [axiosItems, currentPage, text]);
 
   const onPageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
