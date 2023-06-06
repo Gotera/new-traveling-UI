@@ -50,7 +50,7 @@ function JorneyForm() {
   });
 
   async function createUser(data: any) {
-    const url = 'http://localhost:3338/api/register';
+    const url = `${process.env.REACT_APP_API_URL}/register`;
     await axios.post(url, data);
   }
 

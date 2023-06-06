@@ -8,15 +8,15 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable arrow-body-style */
-import { useContext, useEffect, useState } from 'react';
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
-import { UserContext } from '../../../../common/contexts/User';
-import BaseLayout from './baseLayout';
-import UpdateLayout from './updateLayout';
-import Pagination from './Pagination';
-import SearchInput from './SearchInput';
-import { ContentTittle, ContentData, DataUiComponnet } from './DataUI.style';
+import { useContext, useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import { UserContext } from "../../../../common/contexts/User";
+import BaseLayout from "./baseLayout";
+import UpdateLayout from "./updateLayout";
+import Pagination from "./Pagination";
+import SearchInput from "./SearchInput";
+import { ContentTittle, ContentData, DataUiComponnet } from "./DataUI.style";
 
 function DataUI() {
   const itemsPerPage = 10;
@@ -25,8 +25,8 @@ function DataUI() {
   const [currentItems, setCurrentItems] = useState();
   const [items, setItems] = useState([]);
   const [qtPags, setQtPags] = useState(0);
-  const [text, setText] = useState('');
-  const api = 'http://localhost:3338/api/travels/';
+  const [text, setText] = useState("");
+  const api = `${process.env.REACT_APP_API_URL}/travels/`;
 
   const axiosItems = async (page, place) => {
     const response = await axios.get(`${api}search?page=${page}&place=${text}`);

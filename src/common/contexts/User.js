@@ -71,7 +71,7 @@ export function useUserContext() {
 
   function deleteData(dataToBeDeleted) {
     axios
-      .delete(`http://localhost:3338/api/delete/${dataToBeDeleted}`)
+      .delete(`${process.env.REACT_APP_API_URL}/delete/${dataToBeDeleted}`)
       .then(() => {
         const listOfData = histories.filter(
           (data) => data._id !== dataToBeDeleted
@@ -83,7 +83,7 @@ export function useUserContext() {
 
   function updateData(dataToBeUpdated) {
     axios
-      .get(`http://localhost:3338/api/travels/${dataToBeUpdated}`)
+      .get(`${process.env.REACT_APP_API_URL}/travels/${dataToBeUpdated}`)
       .then((res) => {
         setNotaFiscal(res.data.travelResult.nota_fiscal);
         setDataIda(res.data.travelResult.data_ida);
@@ -98,7 +98,7 @@ export function useUserContext() {
 
   function handleUpdate() {
     axios
-      .put(`http://localhost:3338/api/update/${update}`, {
+      .put(`${process.env.REACT_APP_API_URL}/update/${update}`, {
         id: update,
         nota_fiscal,
         data_ida,
