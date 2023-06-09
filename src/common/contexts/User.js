@@ -3,22 +3,23 @@
 /* eslint-disable react/jsx-no-constructed-context-values */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-underscore-dangle */
-import { createContext, useState, useContext } from 'react';
-import axios from 'axios';
+import { createContext, useState, useContext } from "react";
+import axios from "axios";
 
 export const UserContext = createContext();
-UserContext.displayName = 'DeleteFunction';
+UserContext.displayName = "DeleteFunction";
 
 export default function UserProvider({ children }) {
   const [histories, setHistories] = useState([]);
   const [update, setUpdate] = useState(-1);
-  const [nota_fiscal, setNotaFiscal] = useState('');
-  const [data_ida, setDataIda] = useState('');
+  const [nome_destino, SetNomeDestino] = useState("");
+  const [nota_fiscal, setNotaFiscal] = useState("");
+  const [data_ida, setDataIda] = useState("");
   const [data_volta, setDataVolta] = useState();
-  const [quilometragem_ida, setQuilometragemIda] = useState('');
-  const [quilometragem_volta, setQuilometragemVolta] = useState('');
-  const [valor_diesel, setValorDiesel] = useState('');
-  const [lucro, setLucro] = useState('');
+  const [quilometragem_ida, setQuilometragemIda] = useState("");
+  const [quilometragem_volta, setQuilometragemVolta] = useState("");
+  const [valor_diesel, setValorDiesel] = useState("");
+  const [lucro, setLucro] = useState("");
   return (
     <UserContext.Provider
       value={{
@@ -26,6 +27,8 @@ export default function UserProvider({ children }) {
         setHistories,
         update,
         setUpdate,
+        nome_destino,
+        SetNomeDestino,
         nota_fiscal,
         setNotaFiscal,
         data_ida,
@@ -53,6 +56,8 @@ export function useUserContext() {
     setHistories,
     update,
     setUpdate,
+    nome_destino,
+    SetNomeDestino,
     nota_fiscal,
     setNotaFiscal,
     data_ida,
@@ -85,6 +90,7 @@ export function useUserContext() {
     axios
       .get(`${process.env.REACT_APP_API_URL}/travels/${dataToBeUpdated}`)
       .then((res) => {
+        SetNomeDestino(res.data.travelResult.nome_destino);
         setNotaFiscal(res.data.travelResult.nota_fiscal);
         setDataIda(res.data.travelResult.data_ida);
         setDataVolta(res.data.travelResult.data_volta);
@@ -97,9 +103,11 @@ export function useUserContext() {
   }
 
   function handleUpdate() {
+    console.log(data_volta);
     axios
       .put(`${process.env.REACT_APP_API_URL}/update/${update}`, {
         id: update,
+        nome_destino,
         nota_fiscal,
         data_ida,
         data_volta,
@@ -109,7 +117,7 @@ export function useUserContext() {
         lucro,
       })
       .then(() => {
-        location.reload();
+        // location.reload();
         setUpdate(-1);
       })
       .catch((err) => console.log(err));
