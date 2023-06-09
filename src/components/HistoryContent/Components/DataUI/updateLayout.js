@@ -2,20 +2,22 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable react/prop-types */
 /* eslint-disable camelcase */
-import { useContext } from 'react';
-import { RiPencilFill } from 'react-icons/ri';
-import { format } from 'date-fns';
-import { UserContext, useUserContext } from '../../../../common/contexts/User';
+import { useContext } from "react";
+import { RiPencilFill } from "react-icons/ri";
+import { format } from "date-fns";
+import { UserContext, useUserContext } from "../../../../common/contexts/User";
 import {
   HistoryCellWrapper,
   DataUiWrapper,
   ContentTittle,
   Button,
   ContentData,
-} from './DataUI.style';
+} from "./DataUI.style";
 
 function UpdateLayout({ travel }) {
   const {
+    nome_destino,
+    SetNomeDestino,
     nota_fiscal,
     setNotaFiscal,
     data_ida,
@@ -37,7 +39,11 @@ function UpdateLayout({ travel }) {
     <HistoryCellWrapper key={travel._id}>
       <DataUiWrapper>
         <ContentTittle>
-          <input type="text" defaultValue={travel.nome_destino} />
+          <input
+            type="text"
+            defaultValue={travel.nome_destino}
+            onChange={(e) => SetNomeDestino(e.target.value)}
+          />
           <div>
             <Button type="button" onClick={handleUpdate}>
               <RiPencilFill /> Enviar
@@ -59,7 +65,7 @@ function UpdateLayout({ travel }) {
                 placeholder="{data_ida}"
                 onChange={(e) => setDataIda(e.target.value)}
               />
-              <p>{data_ida && format(new Date(travel.data_ida), 'dd/MM/yyyy')}</p>
+              {/* <p>{data_ida && format(new Date(travel.data_ida), 'dd/MM/yyyy')}</p> */}
             </li>
             <li>
               Data de Volta:
@@ -68,7 +74,7 @@ function UpdateLayout({ travel }) {
                 placeholder={data_volta}
                 onChange={(e) => setDataVolta(e.target.value)}
               />
-              <p>{format(new Date(travel.data_volta), 'dd/MM/yyyy')}</p>
+              {/* <p>{data_volta && data_volta && format(new Date(travel.data_volta), 'dd/MM/yyyy')}</p> */}
             </li>
           </ul>
           <ul>
