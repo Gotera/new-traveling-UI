@@ -1,39 +1,46 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { zodResolver } from '@hookform/resolvers/zod';
-// @ts-ignore
-import { Button, Input, InputWrapper, JorneyFormWrapper, ErrorMessage } from './JorneyForm.style.d.ts';
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import React from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import {
+  Button,
+  Input,
+  InputWrapper,
+  JorneyFormWrapper,
+  ErrorMessage,
+  // @ts-ignore
+} from "./JorneyForm.style.d.ts";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 const createUserFormSchema = z.object({
-  nota_fiscal: z.coerce.string({}),
+  nota_fiscal: z.coerce.number({}),
   nome_destino: z.coerce
     .string({
-      required_error: 'O campo de destino é obrigatório',
-      invalid_type_error: 'Precisa ser uma letra',
+      required_error: "O campo de destino é obrigatório",
+      invalid_type_error: "Precisa ser uma letra",
     })
-    .min(5, 'São necessários no mínimo 2 caracteres.'),
-  data_ida: z.coerce.string({
-    required_error: 'O campo de data é obrigatório',
-    invalid_type_error: 'Precisa ser uma letra',
+    .min(5, "São necessários no mínimo 2 caracteres."),
+  data_ida: z.coerce.date({
+    required_error: "O campo de data é obrigatório",
+    invalid_type_error: "Precisa ser uma letra",
   }),
   valor_diesel: z.coerce
     .string({
-      required_error: 'O campo de valor do diesel é obrigatório',
+      required_error: "O campo de valor do diesel é obrigatório",
     })
-    .min(2, 'São necessários no mínimo 2 dígitos.')
-    .max(5, 'Máximo de 5 caracteres excedido'),
+    .min(2, "São necessários no mínimo 2 dígitos.")
+    .max(5, "Máximo de 5 caracteres excedido"),
   quilometragem_ida: z.coerce
     .string({
-      required_error: 'O campo de quilimetragem de ida é obrigatório',
-      invalid_type_error: 'Precisa ser um número',
+      required_error: "O campo de quilimetragem de ida é obrigatório",
+      invalid_type_error: "Precisa ser um número",
     })
-    .min(2, 'São necessários no mínimo 2 dígitos.'),
+    .min(2, "São necessários no mínimo 2 dígitos."),
   quilometragem_volta: z.coerce.string({
     // required_error: 'O campo de quilometragem de volta é obrigatório',
-    invalid_type_error: 'Precisa ser um número',
+    invalid_type_error: "Precisa ser um número",
   }),
 });
 
@@ -51,9 +58,9 @@ function JorneyForm() {
 
   async function createUser(data: any) {
     const url = `${process.env.REACT_APP_API_URL}/register`;
+    console.log(data.data_ida);
     await axios.post(url, data);
   }
-
   return (
     <JorneyFormWrapper>
       <form onSubmit={handleSubmit(createUser)}>
@@ -63,34 +70,43 @@ function JorneyForm() {
             type="text"
             value={params.nome_destino}
             placeholder="São Paulo - SP"
-            {...register('nome_destino')}
+            {...register("nome_destino")}
           />
-          <ErrorMessage>{errors.nome_destino && errors.nome_destino.message}</ErrorMessage>
+          <ErrorMessage>
+            {errors.nome_destino && errors.nome_destino.message}
+          </ErrorMessage>
         </InputWrapper>
         <InputWrapper>
           <label htmlFor="data_ida">Data de Partida</label>
-          <Input
-            type="date"
-            {...register('data_ida')}
-          />
-          <ErrorMessage>{errors.data_ida && errors.data_ida.message}</ErrorMessage>
+          <Input type="date" {...register("data_ida")} />
+          <ErrorMessage>
+            {errors.data_ida && errors.data_ida.message}
+          </ErrorMessage>
         </InputWrapper>
         <InputWrapper>
           <label htmlFor="nota_fiscal">Nota Fiscal</label>
-          <Input type="text" placeholder="937027" {...register('nota_fiscal')} />
-          <ErrorMessage>{errors.nota_fiscal && errors.nota_fiscal.message}</ErrorMessage>
+          <Input
+            type="text"
+            placeholder="937027"
+            {...register("nota_fiscal")}
+          />
+          <ErrorMessage>
+            {errors.nota_fiscal && errors.nota_fiscal.message}
+          </ErrorMessage>
         </InputWrapper>
         <InputWrapper>
           <label htmlFor="valor_diesel">Valor Diesel</label>
-          <Input type="text" placeholder="5,79" {...register('valor_diesel')} />
-          <ErrorMessage>{errors.valor_diesel && errors.valor_diesel.message}</ErrorMessage>
+          <Input type="text" placeholder="5,79" {...register("valor_diesel")} />
+          <ErrorMessage>
+            {errors.valor_diesel && errors.valor_diesel.message}
+          </ErrorMessage>
         </InputWrapper>
         <InputWrapper>
           <label htmlFor="quilometragem_ida">Quilometragem ida</label>
           <Input
             type="text"
             placeholder="28,5"
-            {...register('quilometragem_ida')}
+            {...register("quilometragem_ida")}
           />
           <ErrorMessage>
             {errors.quilometragem_ida && errors.quilometragem_ida.message}
@@ -101,7 +117,7 @@ function JorneyForm() {
           <Input
             type="text"
             placeholder="29,5"
-            {...register('quilometragem_volta')}
+            {...register("quilometragem_volta")}
           />
           <ErrorMessage>
             {errors.quilometragem_volta && errors.quilometragem_volta.message}
