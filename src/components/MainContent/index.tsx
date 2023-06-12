@@ -6,9 +6,11 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Button,
   Input,
-  InputWrapper,
   JorneyFormWrapper,
   ErrorMessage,
+  Li,
+  Ul,
+  ContentWrapper,
   // @ts-ignore
 } from "./JorneyForm.style.d.ts";
 import axios from "axios";
@@ -64,65 +66,79 @@ function JorneyForm() {
   return (
     <JorneyFormWrapper>
       <form onSubmit={handleSubmit(createUser)}>
-        <InputWrapper>
-          <label htmlFor="nome_destino">Nome do Destino</label>
-          <Input
-            type="text"
-            value={params.nome_destino}
-            placeholder="São Paulo - SP"
-            {...register("nome_destino")}
-          />
-          <ErrorMessage>
-            {errors.nome_destino && errors.nome_destino.message}
-          </ErrorMessage>
-        </InputWrapper>
-        <InputWrapper>
-          <label htmlFor="data_ida">Data de Partida</label>
-          <Input type="date" {...register("data_ida")} />
-          <ErrorMessage>
-            {errors.data_ida && errors.data_ida.message}
-          </ErrorMessage>
-        </InputWrapper>
-        <InputWrapper>
-          <label htmlFor="nota_fiscal">Nota Fiscal</label>
-          <Input
-            type="text"
-            placeholder="937027"
-            {...register("nota_fiscal")}
-          />
-          <ErrorMessage>
-            {errors.nota_fiscal && errors.nota_fiscal.message}
-          </ErrorMessage>
-        </InputWrapper>
-        <InputWrapper>
-          <label htmlFor="valor_diesel">Valor Diesel</label>
-          <Input type="text" placeholder="5,79" {...register("valor_diesel")} />
-          <ErrorMessage>
-            {errors.valor_diesel && errors.valor_diesel.message}
-          </ErrorMessage>
-        </InputWrapper>
-        <InputWrapper>
-          <label htmlFor="quilometragem_ida">Quilometragem ida</label>
-          <Input
-            type="text"
-            placeholder="28,5"
-            {...register("quilometragem_ida")}
-          />
-          <ErrorMessage>
-            {errors.quilometragem_ida && errors.quilometragem_ida.message}
-          </ErrorMessage>
-        </InputWrapper>
-        <InputWrapper>
-          <label htmlFor="quilometragem_volta">Quilometragem volta</label>
-          <Input
-            type="text"
-            placeholder="29,5"
-            {...register("quilometragem_volta")}
-          />
-          <ErrorMessage>
-            {errors.quilometragem_volta && errors.quilometragem_volta.message}
-          </ErrorMessage>
-        </InputWrapper>
+        <h2>Cadastro de Viagem</h2>
+        <Ul>
+          <Li>
+            <ContentWrapper>
+              <label htmlFor="nome_destino">Nome do Destino</label>
+              <Input
+                type="text"
+                value={params.nome_destino}
+                placeholder="São Paulo - SP"
+                {...register("nome_destino")}
+              />
+              <ErrorMessage>
+                {errors.nome_destino && errors.nome_destino.message}
+              </ErrorMessage>
+            </ContentWrapper>
+            <ContentWrapper>
+              <label htmlFor="data_ida">Data de Partida</label>
+              <Input type="date" {...register("data_ida")} />
+              <ErrorMessage>
+                {errors.data_ida && errors.data_ida.message}
+              </ErrorMessage>
+            </ContentWrapper>
+          </Li>
+          <Li>
+            <ContentWrapper>
+              <label htmlFor="nota_fiscal">Nota Fiscal</label>
+              <Input
+                type="text"
+                placeholder="937027"
+                {...register("nota_fiscal")}
+              />
+              <ErrorMessage>
+                {errors.nota_fiscal && errors.nota_fiscal.message}
+              </ErrorMessage>
+            </ContentWrapper>
+            <ContentWrapper>
+              <label htmlFor="valor_diesel">Valor Diesel</label>
+              <Input
+                type="text"
+                placeholder="5,79"
+                {...register("valor_diesel")}
+              />
+              <ErrorMessage>
+                {errors.valor_diesel && errors.valor_diesel.message}
+              </ErrorMessage>
+            </ContentWrapper>
+          </Li>
+          <Li>
+            <ContentWrapper>
+              <label htmlFor="quilometragem_ida">Quilometragem ida</label>
+              <Input
+                type="text"
+                placeholder="28,5"
+                {...register("quilometragem_ida")}
+              />
+              <ErrorMessage>
+                {errors.quilometragem_ida && errors.quilometragem_ida.message}
+              </ErrorMessage>
+            </ContentWrapper>
+            <ContentWrapper>
+              <label htmlFor="quilometragem_volta">Quilometragem volta</label>
+              <Input
+                type="text"
+                placeholder="29,5"
+                {...register("quilometragem_volta")}
+              />
+              <ErrorMessage>
+                {errors.quilometragem_volta &&
+                  errors.quilometragem_volta.message}
+              </ErrorMessage>
+            </ContentWrapper>
+          </Li>
+        </Ul>
         <Button type="submit">Salvar</Button>
       </form>
     </JorneyFormWrapper>
