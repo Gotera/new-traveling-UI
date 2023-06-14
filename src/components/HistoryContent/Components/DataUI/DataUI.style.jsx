@@ -5,12 +5,11 @@ export const DataUiComponnet = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.5rem;
 `;
 
 export const HistoryCellWrapper = styled.div`
-  padding: 1rem;
-  height: 25rem;
+  /* padding: 1rem; */
   padding-bottom: 2.5rem;
   display: flex;
   justify-content: space-between;
@@ -30,18 +29,20 @@ export const HistoryCellWrapper = styled.div`
 `;
 
 export const DataUiWrapper = styled.div`
-  height: 10rem;
+  width: 75vw;
+  margin: 0 auto;
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
-  flex-grow: 1;
-  width: 75vw;
-  height: 14rem;
-  margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  border: 1px solid var(--grey);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-wrap: wrap;
 
   input {
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
@@ -58,14 +59,25 @@ export const ContentTittle = styled.div`
   border-top-right-radius: 0.5rem;
   background-color: var(--darkBlue);
   color: var(--white);
-
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   @media (max-width: 600px) {
+    font-size: 1.5rem;
     gap: 30px;
     flex-direction: column;
+    align-items: center;
+  }
+`;
+
+export const ButtonsWrapper = styled.div`
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -132,6 +144,23 @@ export const ContentData = styled.div`
     flex-direction: column;
     align-items: center;
   }
+`;
+
+export const Ul = styled.ul`
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+`;
+
+export const Li = styled.li`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const DataWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
 
 export const CustomSearchInput = styled.input`
