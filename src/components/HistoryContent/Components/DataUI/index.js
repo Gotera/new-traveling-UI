@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-return-assign */
@@ -16,7 +17,7 @@ import BaseLayout from "./baseLayout";
 import UpdateLayout from "./updateLayout";
 import Pagination from "./Pagination";
 import SearchInput from "./SearchInput";
-import { ContentTittle, ContentData, DataUiComponnet } from "./DataUI.style";
+import { DataUiComponnet } from "./DataUI.style";
 
 function DataUI() {
   const itemsPerPage = 10;
@@ -28,7 +29,7 @@ function DataUI() {
   const [text, setText] = useState("");
   const api = `${process.env.REACT_APP_API_URL}/travels/`;
 
-  const axiosItems = async (page, _place) => {
+  const axiosItems = async (page) => {
     const response = await axios.get(`${api}search?page=${page}&place=${text}`);
     setItems(response.data.result);
     setQtPags(response.data.count);
@@ -36,7 +37,7 @@ function DataUI() {
 
   useEffect(() => {
     axiosItems(currentPage);
-  }, [axiosItems, currentPage, text]);
+  }, [currentPage, text]);
 
   const onPageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -44,6 +45,7 @@ function DataUI() {
 
   return (
     <DataUiComponnet>
+      {console.log("renderizou")}
       {items.length && (
         <Pagination
           itemsPerPage={itemsPerPage}
@@ -52,7 +54,7 @@ function DataUI() {
         />
       )}
       <SearchInput value={text} onChange={(search) => setText(search)} />
-      {text && !currentItems && <span>Carregando...</span>}
+      {text && !items ? <span>Carregando...</span> : ""}
       {items?.map((travel) => {
         return travel._id === update ? (
           <UpdateLayout travel={travel} key={travel._id} />
