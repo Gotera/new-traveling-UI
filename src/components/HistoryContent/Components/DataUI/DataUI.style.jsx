@@ -16,15 +16,24 @@ export const HistoryCellWrapper = styled.div`
   flex-direction: column;
   flex-grow: 1;
   flex-shrink: 1;
-  ul:first-child {
+
+  ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
 
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 600px) {
+      flex-direction: column;
+      text-align: center;
+    }
   @media (max-width: 600px) {
     flex-direction: row;
     gap: 15rem;
+    align-items: center;
   }
 `;
 
@@ -59,7 +68,7 @@ export const ContentTittle = styled.div`
   border-top-right-radius: 0.5rem;
   background-color: var(--darkBlue);
   color: var(--white);
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;

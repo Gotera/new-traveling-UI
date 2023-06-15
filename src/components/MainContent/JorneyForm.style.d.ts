@@ -4,12 +4,14 @@ export const JorneyFormWrapper = styled.div`
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
-
   height: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 1000px) {
+    justify-content: flex-start;
+  }
 
   form {
     margin: 1rem;
@@ -24,6 +26,11 @@ export const JorneyFormWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
+    @media (max-width: 1000px) {
+      margin-top: 6rem;
+      align-content: center;
+    }
   }
 
   h2 {
@@ -39,7 +46,6 @@ export const JorneyFormWrapper = styled.div`
 `;
 
 export const Ul = styled.ul`
-  gap: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -47,7 +53,10 @@ export const Ul = styled.ul`
 
   @media (max-width: 1000px) {
     flex-direction: column;
-    gap: 0;
+  }
+
+  @media (max-width: 1000px) {
+    display: initial;
   }
 `;
 
@@ -59,9 +68,12 @@ export const Li = styled.li`
   flex-wrap: wrap;
   display: flex;
   gap: 1rem;
-
   @media (max-width: 1000px) {
     flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: 1.5rem 1rem;
+    gap: 1rem;
   }
 `;
 
@@ -99,6 +111,7 @@ export const Button = styled.button`
   justify-content: center;
   line-height: 1.25;
   margin: 0;
+  margin-bottom: 2rem;
   min-height: 3rem;
   padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
   position: relative;
@@ -112,7 +125,7 @@ export const Button = styled.button`
 
   &hover,
   &:focus {
-    background-color: var(--darkBlue);
+    background-color: #2a62c5;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   }
 
@@ -121,16 +134,14 @@ export const Button = styled.button`
   }
 
   &active {
-    background-color: var(--darkBlue);
+    background-color: #2a62c5;
     box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
     transform: translateY(0);
   }
-  /* width: 13rem;
-  height: 3rem;
-  margin-top: auto;
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 700; */
+
+  @media (max-width: 1000px) {
+    //COLOCAR DO TAMANHO DO INPUT
+  }
 `;
 
 export const ErrorMessage = styled.span`
@@ -138,7 +149,6 @@ export const ErrorMessage = styled.span`
   width: 15rem;
   color: var(--red);
   font-weight: 400;
-  /* margin-bottom: 5rem; */
   display: block;
   position: relative;
   top: 0;
