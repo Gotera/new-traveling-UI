@@ -45,11 +45,17 @@ function BaseLayout({ travel }) {
                 </DataWrapper>
               )}
             </Li>
-            <Li>Quilimetragem de Ida: {travel.quilometragem_ida} km</Li>
-            <Li>Quilometragem de Volta: {travel.quilometragem_volta} km</Li>
-            <Li>Valor do Diesel: {travel.valor_diesel}</Li>
-            <Li>Lucro: {travel.lucro} R$</Li>
+            <Li>
+              <DataWrapper>
+                Quilimetragem de Ida: {travel.quilometragem_ida} km
+              </DataWrapper>
+              <DataWrapper>
+                Quilometragem de Volta: {travel.quilometragem_volta} km
+              </DataWrapper>
+            </Li>
+            <Li>Valor do Diesel: {travel.valor_diesel} p/ L</Li>
           </Ul>
+          Lucro: {travel.lucro} R$
         </ContentData>
       </DataUiWrapper>
     </HistoryCellWrapper>

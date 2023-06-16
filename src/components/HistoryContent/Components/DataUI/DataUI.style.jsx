@@ -27,9 +27,9 @@ export const HistoryCellWrapper = styled.div`
     }
   }
   @media (max-width: 600px) {
-      flex-direction: column;
-      text-align: center;
-    }
+    flex-direction: column;
+    text-align: center;
+  }
   @media (max-width: 600px) {
     flex-direction: row;
     gap: 15rem;
@@ -137,6 +137,7 @@ export const Button = styled.button`
 
 export const ContentData = styled.div`
   padding: 2rem;
+  gap: 1rem;
   display: flex;
   background-color: var(--white);
   border-bottom-left-radius: 0.5rem;
@@ -163,6 +164,7 @@ export const Ul = styled.ul`
 `;
 
 export const Li = styled.li`
+  gap: 1rem;
   display: flex;
   flex-direction: column;
 `;
@@ -182,6 +184,15 @@ export const CustomSearchInput = styled.input`
   box-sizing: border-box;
   border: 2px solid var(--darkBlue);
 `;
+
+export const CustomNotaFiscalInput = styled.input`
+  width: 10rem;
+  top: 0;
+`
+
+export const CustomDataInput = styled.input`
+  width: 5rem;
+`
 
 export const WrapperPagination = styled.div`
   gap: 1rem;

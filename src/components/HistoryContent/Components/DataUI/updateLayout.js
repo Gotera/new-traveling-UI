@@ -12,6 +12,8 @@ import {
   ContentTittle,
   Button,
   ContentData,
+  CustomDataInput,
+  CustomNotaFiscalInput,
 } from "./DataUI.style";
 
 function UpdateLayout({ travel }) {
@@ -51,8 +53,8 @@ function UpdateLayout({ travel }) {
           </div>
         </ContentTittle>
         <ContentData>
-          Nota Fiscal:
-          <input
+          Nota Fiscal: N°
+          <CustomNotaFiscalInput
             type="text"
             defaultValue={nota_fiscal}
             onChange={(e) => setNotaFiscal(e.target.value)}
@@ -65,7 +67,9 @@ function UpdateLayout({ travel }) {
                 placeholder="{data_ida}"
                 onChange={(e) => setDataIda(e.target.value)}
               />
-              {/* <p>{data_ida && format(new Date(travel.data_ida), 'dd/MM/yyyy')}</p> */}
+              <p>
+                {data_ida && format(new Date(travel.data_ida), "dd/MM/yyyy")}
+              </p>
             </li>
             <li>
               Data de Volta:
@@ -74,39 +78,50 @@ function UpdateLayout({ travel }) {
                 placeholder={data_volta}
                 onChange={(e) => setDataVolta(e.target.value)}
               />
-              {/* <p>{data_volta && data_volta && format(new Date(travel.data_volta), 'dd/MM/yyyy')}</p> */}
+              <p>
+                {data_volta &&
+                  data_volta &&
+                  format(new Date(travel.data_volta), "dd/MM/yyyy")}
+              </p>
             </li>
           </ul>
           <ul>
             <li>
               Quilimetragem de Ida:
+              <br />
               <input
                 type="text"
                 defaultValue={quilometragem_ida}
                 onChange={(e) => setQuilometragemIda(e.target.value)}
-              />
+              />{" "}
+              km
             </li>
             <li>
               Quilometragem de Volta:
+              <br />
               <input
                 type="text"
                 defaultValue={quilometragem_volta}
                 onChange={(e) => setQuilometragemVolta(e.target.value)}
-              />
+              />{" "}
+              km
             </li>
           </ul>
           <ul>
             <li>
               Valor do Diesel:
-              <input
+              <br />
+              <CustomDataInput
                 type="text"
                 defaultValue={valor_diesel}
                 onChange={(e) => setValorDiesel(e.target.value)}
-              />
+              />{" "}
+              p /L
             </li>
             <li>
               Lucro:
-              <input
+              <br />
+              <CustomDataInput
                 type="text"
                 defaultValue={lucro}
                 onChange={(e) => setLucro(e.target.value)}
