@@ -4,7 +4,7 @@
 /* eslint-disable camelcase */
 import { useContext } from "react";
 import { RiPencilFill } from "react-icons/ri";
-import { format } from "date-fns";
+import { format, parseISO } from "date-fns";
 import { UserContext, useUserContext } from "../../../../common/contexts/User";
 import {
   HistoryCellWrapper,
@@ -18,7 +18,6 @@ import {
 
 function UpdateLayout({ travel }) {
   const {
-    nome_destino,
     SetNomeDestino,
     nota_fiscal,
     setNotaFiscal,
@@ -62,13 +61,15 @@ function UpdateLayout({ travel }) {
           <ul>
             <li>
               Data de Saida:
+              {console.log(data_ida)}
               <input
                 type="date"
                 placeholder="{data_ida}"
                 onChange={(e) => setDataIda(e.target.value)}
               />
               <p>
-                {data_ida && format(new Date(travel.data_ida), "dd/MM/yyyy")}
+                {console.log(data_ida)}
+                {data_ida && format(parseISO(travel.data_ida), "dd/MM/yyyy")}
               </p>
             </li>
             <li>
@@ -79,9 +80,7 @@ function UpdateLayout({ travel }) {
                 onChange={(e) => setDataVolta(e.target.value)}
               />
               <p>
-                {data_volta &&
-                  data_volta &&
-                  format(new Date(travel.data_volta), "dd/MM/yyyy")}
+                {!data_volta ? "" : format(parseISO(travel.data_volta), "dd/MM/yyyy")}
               </p>
             </li>
           </ul>

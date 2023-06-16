@@ -2,7 +2,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
 import {
   Button,
   Input,
@@ -14,8 +13,6 @@ import {
   // @ts-ignore
 } from "./JorneyForm.style.d.ts";
 import axios from "axios";
-import { useParams } from "react-router-dom";
-
 const createUserFormSchema = z.object({
   nota_fiscal: z.coerce.number({}),
   nome_destino: z.coerce
@@ -26,7 +23,7 @@ const createUserFormSchema = z.object({
     .min(5, "São necessários no mínimo 2 caracteres."),
   data_ida: z.coerce.date({
     required_error: "O campo de data é obrigatório",
-    invalid_type_error: "Precisa ser uma letra",
+    invalid_type_error: "Precisa ser uma data",
   }),
   valor_diesel: z.coerce
     .string({
@@ -41,7 +38,7 @@ const createUserFormSchema = z.object({
     })
     .min(2, "São necessários no mínimo 2 dígitos."),
   quilometragem_volta: z.coerce.string({
-    // required_error: 'O campo de quilometragem de volta é obrigatório',
+    required_error: 'O campo de quilometragem de volta é obrigatório',
     invalid_type_error: "Precisa ser um número",
   }),
 });
@@ -49,7 +46,6 @@ const createUserFormSchema = z.object({
 type createUserFormData = z.infer<typeof createUserFormSchema>;
 
 function JorneyForm() {
-  const params = useParams();
   const {
     register,
     handleSubmit,
@@ -73,7 +69,6 @@ function JorneyForm() {
               <label htmlFor="nome_destino">Nome do Destino</label>
               <Input
                 type="text"
-                value={params.nome_destino}
                 placeholder="São Paulo - SP"
                 {...register("nome_destino")}
               />

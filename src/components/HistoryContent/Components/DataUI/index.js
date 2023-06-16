@@ -45,7 +45,6 @@ function DataUI() {
 
   return (
     <DataUiComponnet>
-      {console.log("renderizou")}
       {items.length && (
         <Pagination
           itemsPerPage={itemsPerPage}
