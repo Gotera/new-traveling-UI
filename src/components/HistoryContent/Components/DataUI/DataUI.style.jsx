@@ -133,6 +133,9 @@ export const Button = styled.button`
     cursor: not-allowed;
     opacity: 1;
   }
+  @media (max-width: 600px) {
+    width: 106.7px;
+  }
 `;
 
 export const ContentData = styled.div`
@@ -153,6 +156,8 @@ export const ContentData = styled.div`
     gap: 15px;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+
   }
 `;
 
@@ -170,8 +175,6 @@ export const Li = styled.li`
 `;
 
 export const DataWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
 `;
 
 export const CustomSearchInput = styled.input`

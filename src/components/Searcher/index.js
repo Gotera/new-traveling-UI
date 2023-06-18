@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 
 function Seacher(histories) {
   const [search, setSearch] = useState('');
-  console.log(search);
   const filteredHistories = histories.filter((history) =>
     history.startsWith(search)
   );
