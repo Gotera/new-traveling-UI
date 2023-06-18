@@ -36,12 +36,13 @@ function BaseLayout({ travel }) {
           <Ul>
             <Li>
               <DataWrapper>
-                Data de Saida: {format(new Date(travel.data_ida), "dd/MM/yyyy")}
+                Data de Saida:{" "}
+                {format(new Date(travel.data_ida.replace(/-/g, "/").replace(/T.+/, "")), "dd/MM/yyyy")}
               </DataWrapper>
               {travel.data_volta && (
                 <DataWrapper>
                   Data de Volta:{" "}
-                  {format(new Date(travel.data_volta), "dd/MM/yyyy")}
+                  {format(new Date(travel.data_volta.replace(/-/g, "/").replace(/T.+/, "")), "dd/MM/yyyy")}
                 </DataWrapper>
               )}
             </Li>

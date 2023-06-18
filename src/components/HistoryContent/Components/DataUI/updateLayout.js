@@ -61,27 +61,19 @@ function UpdateLayout({ travel }) {
           <ul>
             <li>
               Data de Saida:
-              {console.log(data_ida)}
               <input
                 type="date"
-                placeholder="{data_ida}"
+                defaultValue={format(new Date(travel.data_ida.replace(/-/g, "/").replace(/T.+/, "")), "yyyy-MM-dd")}
                 onChange={(e) => setDataIda(e.target.value)}
               />
-              <p>
-                {console.log(data_ida)}
-                {data_ida && format(parseISO(travel.data_ida), "dd/MM/yyyy")}
-              </p>
             </li>
             <li>
               Data de Volta:
               <input
                 type="date"
-                placeholder={data_volta}
+                defaultValue={travel.data_volta && format(new Date(travel.data_volta.replace(/-/g, "/").replace(/T.+/, "")), "yyyy-MM-dd")}
                 onChange={(e) => setDataVolta(e.target.value)}
               />
-              <p>
-                {!data_volta ? "" : format(parseISO(travel.data_volta), "dd/MM/yyyy")}
-              </p>
             </li>
           </ul>
           <ul>

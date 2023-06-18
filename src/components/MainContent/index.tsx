@@ -56,7 +56,6 @@ function JorneyForm() {
 
   async function createUser(data: any) {
     const url = `${process.env.REACT_APP_API_URL}/register`;
-    console.log(data.data_ida);
     await axios.post(url, data);
   }
   return (

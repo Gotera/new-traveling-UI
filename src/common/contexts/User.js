@@ -14,7 +14,7 @@ export default function UserProvider({ children }) {
   const [update, setUpdate] = useState(-1);
   const [nome_destino, SetNomeDestino] = useState("");
   const [nota_fiscal, setNotaFiscal] = useState("");
-  const [data_ida, setDataIda] = useState("");
+  const [data_ida, setDataIda] = useState();
   const [data_volta, setDataVolta] = useState();
   const [quilometragem_ida, setQuilometragemIda] = useState("");
   const [quilometragem_volta, setQuilometragemVolta] = useState("");
@@ -103,7 +103,6 @@ export function useUserContext() {
   }
 
   function handleUpdate() {
-    console.log(data_volta);
     axios
       .put(`${process.env.REACT_APP_API_URL}/update/${update}`, {
         id: update,
@@ -117,7 +116,7 @@ export function useUserContext() {
         lucro,
       })
       .then(() => {
-        // location.reload();
+        location.reload();
         setUpdate(-1);
       })
       .catch((err) => console.log(err));
