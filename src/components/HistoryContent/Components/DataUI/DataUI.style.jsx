@@ -9,7 +9,6 @@ export const DataUiComponnet = styled.div`
 `;
 
 export const HistoryCellWrapper = styled.div`
-  /* padding: 1rem; */
   padding-bottom: 2.5rem;
   display: flex;
   justify-content: space-between;
@@ -21,7 +20,6 @@ export const HistoryCellWrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     @media (max-width: 600px) {
       flex-direction: column;
     }
@@ -52,7 +50,6 @@ export const DataUiWrapper = styled.div`
   flex-direction: column;
   flex-grow: 1;
   flex-wrap: wrap;
-
   input {
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
       "Helvetica Neue", sans-serif;
@@ -68,7 +65,6 @@ export const ContentTittle = styled.div`
   border-top-right-radius: 0.5rem;
   background-color: var(--darkBlue);
   color: var(--white);
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -147,17 +143,14 @@ export const ContentData = styled.div`
   justify-content: space-between;
   flex-direction: column;
   flex-shrink: 1;
-
   ul {
     margin-top: 1rem;
   }
-
   @media (max-width: 600px) {
     gap: 15px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
   }
 `;
 
@@ -174,8 +167,7 @@ export const Li = styled.li`
   flex-direction: column;
 `;
 
-export const DataWrapper = styled.div`
-`;
+export const DataWrapper = styled.div``;
 
 export const CustomSearchInput = styled.input`
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
@@ -191,11 +183,11 @@ export const CustomSearchInput = styled.input`
 export const CustomNotaFiscalInput = styled.input`
   width: 10rem;
   top: 0;
-`
+`;
 
 export const CustomDataInput = styled.input`
   width: 5rem;
-`
+`;
 
 export const WrapperPagination = styled.div`
   gap: 1rem;

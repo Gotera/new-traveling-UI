@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { ZodIssueCode, z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Button,
@@ -14,32 +14,32 @@ import {
 } from "./JorneyForm.style.d.ts";
 import axios from "axios";
 const createUserFormSchema = z.object({
-  nota_fiscal: z.coerce.number({}),
+  nota_fiscal: z.coerce.number({
+    required_error: "O campo de destino é obrigatório.",
+    invalid_type_error: "Precisa ser um número.",
+  }),
   nome_destino: z.coerce
     .string({
-      required_error: "O campo de destino é obrigatório",
-      invalid_type_error: "Precisa ser uma letra",
+      required_error: "O campo de destino é obrigatório.",
+      invalid_type_error: "Precisa ser uma letra.",
     })
-    .min(5, "São necessários no mínimo 2 caracteres."),
-  data_ida: z.coerce.date({
-    required_error: "O campo de data é obrigatório",
-    invalid_type_error: "Precisa ser uma data",
-  }),
+    .min(5, "São necessários no mínimo 5 caracteres."),
+  data_ida: z.coerce.date(),
   valor_diesel: z.coerce
-    .string({
-      required_error: "O campo de valor do diesel é obrigatório",
-    })
-    .min(2, "São necessários no mínimo 2 dígitos.")
-    .max(5, "Máximo de 5 caracteres excedido"),
-  quilometragem_ida: z.coerce
-    .string({
-      required_error: "O campo de quilimetragem de ida é obrigatório",
-      invalid_type_error: "Precisa ser um número",
+    .number({
+      required_error: "O campo de valor do diesel é obrigatório.",
+      invalid_type_error: "Precisa ser um número.",
     })
     .min(2, "São necessários no mínimo 2 dígitos."),
-  quilometragem_volta: z.coerce.string({
-    required_error: 'O campo de quilometragem de volta é obrigatório',
-    invalid_type_error: "Precisa ser um número",
+  quilometragem_ida: z.coerce
+    .number({
+      required_error: "O campo de quilimetragem de ida é obrigatório.",
+      invalid_type_error: "Precisa ser um número.",
+    })
+    .min(2, "São necessários no mínimo 2 dígitos."),
+  quilometragem_volta: z.coerce.number({
+    required_error: "O campo de quilometragem de volta é obrigatório.",
+    invalid_type_error: "Precisa ser um número.",
   }),
 });
 
@@ -57,6 +57,7 @@ function JorneyForm() {
   async function createUser(data: any) {
     const url = `${process.env.REACT_APP_API_URL}/register`;
     await axios.post(url, data);
+    alert("Viagem Cadastrada!");
   }
   return (
     <JorneyFormWrapper>
@@ -79,7 +80,9 @@ function JorneyForm() {
               <label htmlFor="data_ida">Data de Partida</label>
               <Input type="date" {...register("data_ida")} />
               <ErrorMessage>
-                {errors.data_ida && errors.data_ida.message}
+                {errors.data_ida
+                  ? (errors.data_ida.message = "O campo de data é obrigatório.")
+                  : ""}
               </ErrorMessage>
             </ContentWrapper>
           </Li>
