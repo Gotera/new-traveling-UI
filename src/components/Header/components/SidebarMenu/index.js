@@ -1,18 +1,18 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import './Sidebar.css';
+import { Label, SideBarInput, SidebarBody, SidebarWrapper } from './Sidebar.style';
 import { AiOutlineHistory } from 'react-icons/ai';
 import { BsFillClipboardDataFill } from 'react-icons/bs';
 
 function Sidebar() {
   return (
-    <div className="Sidebar__Wrapper">
-      <input type="checkbox" id="toggle" />
-      <label htmlFor="toggle">
+    <SidebarWrapper className="Sidebar__Wrapper">
+      <SideBarInput type="checkbox" id="toggle" />
+      <Label htmlFor="toggle">
         <span className="Bar" />
         <span className="Bar" />
         <span className="Bar" />
-      </label>
-      <div className="Sidebar">
+      </Label>
+      <SidebarBody className="Sidebar">
         <ul>
           <li>Board</li>
           <li>
@@ -28,8 +28,8 @@ function Sidebar() {
             </a>
           </li>
         </ul>
-      </div>
-    </div>
+      </SidebarBody>
+    </SidebarWrapper>
   );
 }
 
