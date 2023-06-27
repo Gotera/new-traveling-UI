@@ -22,3 +22,17 @@ export const HeaderWrapperBars = styled.div`
   cursor: pointer;
   position: fixed;
 `;
+import styled from "styled-components";
+import { colors } from "../../App.style";
+
+export const HeaderWrapper = styled.div`
+  height: 100px;
+  display: flex;
+  background-color: ${colors.darkBlue};
+  box-shadow: 0 0 20px 3px;
+  display: flex;
+  place-items: center;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+`;

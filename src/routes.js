@@ -6,6 +6,7 @@ import Header from './components/Header';
 import History from './pages/History';
 import JorneyForm from './components/MainContent';
 import UserProvider from './common/contexts/User';
+import Login from './pages/Login';
 
 function AppRouter() {
   return (
@@ -14,6 +15,7 @@ function AppRouter() {
       <UserProvider>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/historico" element={<History />} />
           <Route path="/historico/:_id" element={<JorneyForm />} />
         </Routes>

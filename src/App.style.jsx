@@ -9,6 +9,7 @@ export const GlobalSettings = styled.div`
 export const colors = {
   darkBlue: "#0B2447",
   lightierBlue: "#19376D",
+  babyBlue: "#2a62c5",
   white: "#FEFEFE",
   grey: "#D9D9D9",
   dark: "#0A0A0A",
