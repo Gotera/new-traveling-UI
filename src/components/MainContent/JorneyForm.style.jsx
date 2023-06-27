@@ -1,10 +1,10 @@
-const { default: styled } = require("styled-components");
+import styled from "styled-components";
+import { colors } from "../../App.style";
 
 export const JorneyFormWrapper = styled.div`
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
-  height: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,7 +21,7 @@ export const JorneyFormWrapper = styled.div`
     margin-top: 2rem;
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    border: 0.1px solid var(--grey);
+    border: 0.1px solid ${colors.grey};
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
@@ -36,12 +36,12 @@ export const JorneyFormWrapper = styled.div`
   h2 {
     width: 100%;
     font-size: 28px;
-    padding: 1rem;
+    padding: 1rem 0;
     text-align: center;
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    background-color: var(--darkBlue);
-    color: var(--white);
+    background-color: ${colors.darkBlue};
+    color: ${colors.white};
   }
 `;
 
@@ -53,9 +53,6 @@ export const Ul = styled.ul`
 
   @media (max-width: 1000px) {
     flex-direction: column;
-  }
-
-  @media (max-width: 1000px) {
     display: initial;
   }
 `;
@@ -80,15 +77,15 @@ export const Li = styled.li`
 export const Input = styled.input`
   width: 15rem;
   height: 3rem;
-  background-color: var(--grey);
-  color: var(--black);
+  background-color: ${colors.grey};
+  color: ${colors.dark};
   font-size: 28px;
   line-height: 38px;
   padding-left: 5px;
   border-radius: 4px;
   display: flex;
-  justify-content: space - between;
-  &focus {
+  justify-content: space-between;
+  &:focus {
     outline: 3px solid transparent;
   }
 `;
@@ -96,7 +93,7 @@ export const Input = styled.input`
 export const Button = styled.button`
   align-items: center;
   background-clip: padding-box;
-  background-color: var(--lightierBlue);
+  background-color: ${colors.lightierBlue};
   border: 1px solid transparent;
   border-radius: 0.25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -123,18 +120,18 @@ export const Button = styled.button`
   vertical-align: baseline;
   width: auto;
 
-  &hover,
+  &:hover,
   &:focus {
-    background-color: #2a62c5;
+    background-color: ${colors.babyBlue};
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   }
 
-  &hover {
+  &:hover {
     transform: translateY(-1px);
   }
 
-  &active {
-    background-color: #2a62c5;
+  &:active {
+    background-color: ${colors.babyBlue};
     box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
     transform: translateY(0);
   }
@@ -147,7 +144,7 @@ export const Button = styled.button`
 export const ErrorMessage = styled.span`
   height: 2rem;
   width: 15rem;
-  color: var(--red);
+  color: ${colors.red};
   font-weight: 400;
   display: block;
   position: relative;

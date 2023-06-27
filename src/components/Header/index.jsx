@@ -1,12 +1,12 @@
-import './Header.css';
-import { memo } from 'react';
-import Sidebar from './components/SidebarMenu/index';
+import { memo } from "react";
+import Sidebar from "./components/SidebarMenu/index";
+import { HeaderWrapper } from "./Header.style.jsx";
 
 function Header() {
   return (
-    <div className="Header__Wrapper">
+    <HeaderWrapper>
       <Sidebar />
-    </div>
+    </HeaderWrapper>
   );
 }
 

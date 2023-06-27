@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { ZodIssueCode, z } from "zod";
+import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Button,
@@ -11,7 +11,7 @@ import {
   Ul,
   ContentWrapper,
   // @ts-ignore
-} from "./JorneyForm.style.d.ts";
+} from "./JorneyForm.style.jsx";
 import axios from "axios";
 const createUserFormSchema = z.object({
   nota_fiscal: z.coerce.number({

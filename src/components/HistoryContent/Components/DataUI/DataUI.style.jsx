@@ -1,3 +1,4 @@
+import { colors } from "../../../../App.style";
 const { default: styled } = require("styled-components");
 
 export const DataUiComponnet = styled.div`
@@ -45,7 +46,7 @@ export const DataUiWrapper = styled.div`
   border-top-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  border: 1px solid var(--grey);
+  border: 1px solid ${colors.grey};
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -63,8 +64,8 @@ export const ContentTittle = styled.div`
   padding: 2rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  background-color: var(--darkBlue);
-  color: var(--white);
+  background-color: ${colors.darkBlue};
+  color: ${colors.white};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -138,7 +139,7 @@ export const ContentData = styled.div`
   padding: 2rem;
   gap: 1rem;
   display: flex;
-  background-color: var(--white);
+  background-color: ${colors.white};
   border-bottom-left-radius: 0.5rem;
   justify-content: space-between;
   flex-direction: column;
@@ -177,7 +178,7 @@ export const CustomSearchInput = styled.input`
   outline: 0;
   border-radius: 2em;
   box-sizing: border-box;
-  border: 2px solid var(--darkBlue);
+  border: 2px solid ${colors.darkBlue};
 `;
 
 export const CustomNotaFiscalInput = styled.input`
@@ -199,16 +200,16 @@ export const WrapperPagination = styled.div`
 export const PaginationButton = styled.button`
   padding: 4px;
   border: none;
-  border-bottom: 3px solid var(--lightierBlue);
-  background-color: var(--white);
+  border-bottom: 3px solid ${colors.lightierBlue};
+  background-color: ${colors.white};
 `;
 
 export const PagesButton = styled.button`
   padding: 4px;
   border: none;
   font-weight: 400;
-  border: 2px solid var(--lightierBlue);
-  background-color: var(--white);
+  border: 2px solid ${colors.lightierBlue};
+  background-color: ${colors.white};
   margin-left: 4px;
 
   &:first-child {
