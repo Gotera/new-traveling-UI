@@ -1,5 +1,5 @@
-const { default: styled } = require("styled-components");
 import { colors } from "../../../../App.style";
+const { default: styled } = require("styled-components");
 
 export const DataUiComponnet = styled.div`
   display: flex;
