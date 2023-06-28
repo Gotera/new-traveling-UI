@@ -1,10 +1,6 @@
-import JorneyForm from '../components/MainContent/index.tsx'
+import JorneyForm from "../components/MainContent/index.tsx";
 
 function Home() {
-  return (
-    <div className="App">
-      <JorneyForm />
-    </div>
-  );
+  return <JorneyForm />;
 }
 export default Home;

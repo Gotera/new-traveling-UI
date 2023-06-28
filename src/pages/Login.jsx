@@ -2,11 +2,7 @@ import React from "react";
 import Login from "../components/Login/login";
 
 function LoginPage() {
-  return (
-    <div>
-      <Login />
-    </div>
-  );
+  return <Login />;
 }
 
 export default LoginPage;
