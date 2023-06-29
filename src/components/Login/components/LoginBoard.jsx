@@ -5,10 +5,10 @@ import {
   LoginTittle,
   LoginWrapper,
   SubmitButton,
-} from "./login.style";
-import { Li, Ul } from "../HistoryContent/Components/DataUI/DataUI.style";
+} from "./LoginBoard.style";
+import { Li, Ul } from "../../HistoryContent/Components/DataUI/DataUI.style";
 
-function Login() {
+function LoginBoard() {
   return (
     <LoginWrapper>
       <LoginTittle>
@@ -45,4 +45,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginBoard;

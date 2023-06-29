@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../App.style";
+import { colors } from "../../../App.style";
 
 export const LoginWrapper = styled.div`
   width: 23rem;
@@ -7,7 +7,7 @@ export const LoginWrapper = styled.div`
   margin-top: 16rem;
   border-radius: 0.8rem;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
-  "Helvetica Neue", sans-serif;
+    "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   background-color: ${colors.lightierBlue};
@@ -46,6 +46,15 @@ export const FieldsWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     color: ${colors.white};
+
+    p {
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        transform: translateY(-3px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+      }
+    }
   }
 `;
 
@@ -78,7 +87,8 @@ export const SubmitButton = styled.button`
   letter-spacing: normal;
   font-weight: 500;
   font-size: 2rem;
-  
+  cursor: pointer;
+
   &:hover,
   &:focus {
     background-color: ${colors.babyBlue};
