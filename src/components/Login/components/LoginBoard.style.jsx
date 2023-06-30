@@ -36,19 +36,33 @@ export const LoginTittle = styled.div`
 `;
 
 export const FieldsWrapper = styled.div`
+  position: relative;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
     "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
+
+  .React_Icon {
+    padding: 0.8rem 4px;
+    position: absolute;
+    color: ${colors.darkGrey};
+    &:hover,
+    &:focus {
+      transform: translateY(-3px);
+    }
+  }
+
   Li:nth-child(5) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     color: ${colors.white};
 
     p {
       cursor: pointer;
+      text-align: center;
+
       &:hover,
       &:focus {
         transform: translateY(-3px);
@@ -61,6 +75,7 @@ export const FieldsWrapper = styled.div`
 export const LoginInput = styled.input`
   height: 3rem;
   padding: 4px;
+  padding-left: 1.5rem;
   border: 0;
   outline: 0;
   border-bottom: 4px solid ${colors.babyBlue};

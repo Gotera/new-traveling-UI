@@ -12,6 +12,7 @@ export const colors = {
   babyBlue: "#2a62c5",
   white: "#FEFEFE",
   grey: "#D9D9D9",
+  darkGrey: "#757575",
   dark: "#0A0A0A",
   red: "#C33B49",
 };

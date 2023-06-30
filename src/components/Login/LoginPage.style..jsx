@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../App.style";
 
 export const LoginPageWrapper = styled.div`
   width: 60rem auto;
@@ -9,7 +10,10 @@ export const LoginPageWrapper = styled.div`
 `;
 
 export const LoginPageContainer = styled.div``;
-export const BookWrapper = styled.div``;
+export const BookWrapper = styled.div`
+  padding: 6rem;
+  background-color: ${colors.darkBlue};
+`;
 export const UlHorizontal = styled.ul`
   display: flex;
   flex-direction: row;

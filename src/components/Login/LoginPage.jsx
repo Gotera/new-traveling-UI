@@ -1,7 +1,6 @@
 import React from "react";
 import {
   BookWrapper,
-  LiHorizontal,
   LoginPageContainer,
   LoginPageWrapper,
   UlHorizontal,
