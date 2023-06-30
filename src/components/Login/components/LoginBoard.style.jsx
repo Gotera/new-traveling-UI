@@ -2,9 +2,7 @@ import styled from "styled-components";
 import { colors } from "../../../App.style";
 
 export const LoginWrapper = styled.div`
-  width: 23rem;
-  height: 32rem;
-  margin-top: 16rem;
+  padding: 4rem;
   border-radius: 0.8rem;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
     "Helvetica Neue", sans-serif;
@@ -16,7 +14,6 @@ export const LoginWrapper = styled.div`
   justify-content: center;
   align-items: center;
   left: 0%;
-
   @media (max-width: 1000px) {
     margin-top: 10rem;
   }
@@ -32,7 +29,7 @@ export const LoginTittle = styled.div`
   background-color: ${colors.babyBlue};
   border: 2px solid ${colors.white};
   position: absolute;
-  bottom: 66%;
+  bottom: 67%;
 `;
 
 export const FieldsWrapper = styled.div`
@@ -41,28 +38,21 @@ export const FieldsWrapper = styled.div`
     "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
-
   .React_Icon {
+    z-index: 2;
     padding: 0.8rem 4px;
     position: absolute;
     color: ${colors.darkGrey};
-    &:hover,
-    &:focus {
-      transform: translateY(-3px);
-    }
   }
-
   Li:nth-child(5) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: end;
     color: ${colors.white};
-
     p {
       cursor: pointer;
       text-align: center;
-
       &:hover,
       &:focus {
         transform: translateY(-3px);

@@ -7,6 +7,7 @@ import {
 } from "./LoginPage.style.";
 import LoginBoard from "./components/LoginBoard";
 import { Li } from "../HistoryContent/Components/DataUI/DataUI.style";
+import SVGIcon from "../../assets/Login/undraw_delivery_truck_vt6p.svg";
 
 function LoginPage() {
   return (
@@ -14,7 +15,9 @@ function LoginPage() {
       <LoginPageContainer>
         <BookWrapper>
           <UlHorizontal>
-            <Li>teste</Li>
+            <Li>
+              <img src={SVGIcon} height={220} width={503} />
+            </Li>
             <Li>
               <LoginBoard />
             </Li>
