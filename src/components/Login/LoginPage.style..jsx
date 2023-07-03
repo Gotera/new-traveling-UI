@@ -19,9 +19,10 @@ export const LoginPageWrapper = styled.div`
   .circles {
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: calc(100vh - 100px);
     overflow: hidden;
+    bottom: -150px;
   }
 
   .circles li {

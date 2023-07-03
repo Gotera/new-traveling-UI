@@ -14,7 +14,6 @@ export const LoginWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  left: 0%;
 `;
 
 export const LoginTittle = styled.div`
