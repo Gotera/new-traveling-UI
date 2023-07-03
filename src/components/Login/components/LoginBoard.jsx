@@ -48,6 +48,11 @@ function LoginBoard() {
               </p>
             </Li>
             <Li>
+              <p>
+                <a>Ainda não possui uma conta?</a>
+              </p>
+            </Li>
+            <Li>
               <SubmitButton>Entrar</SubmitButton>
             </Li>
           </Ul>

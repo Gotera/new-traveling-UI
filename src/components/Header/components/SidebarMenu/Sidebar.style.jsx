@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { colors } from "../../../../App.style";
 
 export const SidebarWrapper = styled.div`
+  z-index: 3;
   width: 22rem;
   transition: 0.6s ease-in;
 `;

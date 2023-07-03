@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { colors } from "../../../App.style";
 
 export const LoginWrapper = styled.div`
+  position: relative;
   padding: 4rem;
   border-radius: 0.8rem;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
@@ -14,9 +15,6 @@ export const LoginWrapper = styled.div`
   justify-content: center;
   align-items: center;
   left: 0%;
-  @media (max-width: 1000px) {
-    margin-top: 10rem;
-  }
 `;
 
 export const LoginTittle = styled.div`
@@ -29,17 +27,16 @@ export const LoginTittle = styled.div`
   background-color: ${colors.babyBlue};
   border: 2px solid ${colors.white};
   position: absolute;
-  bottom: 67%;
+  bottom: 94%;
 `;
 
 export const FieldsWrapper = styled.div`
-  position: relative;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
     "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
   .React_Icon {
-    z-index: 2;
+    z-index: 1;
     padding: 0.8rem 4px;
     position: absolute;
     color: ${colors.darkGrey};
@@ -49,6 +46,18 @@ export const FieldsWrapper = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: end;
+    color: ${colors.white};
+    p {
+      cursor: pointer;
+      text-align: center;
+      &:hover,
+      &:focus {
+        transform: translateY(-3px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+      }
+    }
+  }
+  Li:nth-child(6) {
     color: ${colors.white};
     p {
       cursor: pointer;
