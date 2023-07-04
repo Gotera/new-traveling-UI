@@ -5,6 +5,9 @@ import {
   LoginPageContainer,
   LoginPageWrapper,
   UlHorizontal,
+  AreaCircles,
+  Circles,
+  LiCircles,
 } from "./LoginPage.style.";
 import LoginBoard from "./components/LoginBoard";
 import SVGIcon from "../../assets/Login/undraw_delivery_truck_vt6p.svg";
@@ -12,20 +15,20 @@ import SVGIcon from "../../assets/Login/undraw_delivery_truck_vt6p.svg";
 function LoginPage() {
   return (
     <LoginPageWrapper>
-      <div class="area">
-        <ul class="circles">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
+      <AreaCircles>
+        <Circles>
+          <LiCircles></LiCircles>
+          <LiCircles></LiCircles>
+          <LiCircles></LiCircles>
+          <LiCircles></LiCircles>
+          <LiCircles></LiCircles>
+          <LiCircles></LiCircles>
+          <LiCircles></LiCircles>
+          <LiCircles></LiCircles>
+          <LiCircles></LiCircles>
+          <LiCircles></LiCircles>
+        </Circles>
+      </AreaCircles>
       <LoginPageContainer>
         <BookWrapper>
           <UlHorizontal>
