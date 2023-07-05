@@ -40,7 +40,7 @@ export const FieldsWrapper = styled.div`
     position: absolute;
     color: ${colors.darkGrey};
   }
-  Li:nth-child(5) {
+  Li:nth-child(3) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -56,7 +56,7 @@ export const FieldsWrapper = styled.div`
       }
     }
   }
-  Li:nth-child(6) {
+  Li:nth-child(4) {
     color: ${colors.white};
     p {
       cursor: pointer;

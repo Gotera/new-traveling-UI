@@ -14,7 +14,7 @@ import {
   HiOutlineLockClosed,
 } from "react-icons/hi";
 
-function LoginPainel() {
+function RegisterPainel() {
   return (
     <LoginWrapper>
       <LoginTittle>
@@ -24,6 +24,10 @@ function LoginPainel() {
         <form>
           <Ul>
             <Li>
+              <BiUser className="React_Icon" />
+              <LoginInput type="name" placeholder="Nome"></LoginInput>
+            </Li>
+            <Li>
               <HiOutlineMail className="React_Icon" />
               <LoginInput type="email" placeholder="Email" />
             </Li>
@@ -32,17 +36,8 @@ function LoginPainel() {
               <LoginInput type="password" placeholder="Senha" />
             </Li>
             <Li>
-              <p>
-                <input type="checkbox" /> Lembrar
-              </p>
-              <p>
-                <a>Esqueceu a Senha?</a>
-              </p>
-            </Li>
-            <Li>
-              <p>
-                <a>Ainda não possui uma conta?</a>
-              </p>
+              <HiOutlineLockOpen className="React_Icon" />
+              <LoginInput type="password" placeholder="Confirme a Senha" />
             </Li>
             <Li>
               <SubmitButton>Entrar</SubmitButton>
@@ -54,4 +49,4 @@ function LoginPainel() {
   );
 }
 
-export default LoginPainel;
+export default RegisterPainel;

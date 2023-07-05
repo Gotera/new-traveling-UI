@@ -3,7 +3,7 @@ import {
   BookWrapper,
   LiBook,
   LoginPageContainer,
-  LoginPageWrapper,
+  UserPageWrapper,
   UlHorizontal,
   AreaCircles,
   Circles,
@@ -14,21 +14,7 @@ import SVGIcon from "../../assets/Login/undraw_delivery_truck_vt6p.svg";
 
 function LoginPage() {
   return (
-    <LoginPageWrapper>
-      <AreaCircles>
-        <Circles>
-          <LiCircles></LiCircles>
-          <LiCircles></LiCircles>
-          <LiCircles></LiCircles>
-          <LiCircles></LiCircles>
-          <LiCircles></LiCircles>
-          <LiCircles></LiCircles>
-          <LiCircles></LiCircles>
-          <LiCircles></LiCircles>
-          <LiCircles></LiCircles>
-          <LiCircles></LiCircles>
-        </Circles>
-      </AreaCircles>
+    <UserPageWrapper>
       <LoginPageContainer>
         <BookWrapper>
           <UlHorizontal>
@@ -41,7 +27,7 @@ function LoginPage() {
           </UlHorizontal>
         </BookWrapper>
       </LoginPageContainer>
-    </LoginPageWrapper>
+    </UserPageWrapper>
   );
 }
 
