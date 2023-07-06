@@ -2,7 +2,7 @@ import React from "react";
 import {
   BookWrapper,
   LiBook,
-  LoginPageContainer,
+  UserPageContainer,
   UserPageWrapper,
   UlHorizontal,
   AreaCircles,
@@ -15,7 +15,7 @@ import SVGIcon from "../../assets/Login/undraw_delivery_truck_vt6p.svg";
 function LoginPage() {
   return (
     <UserPageWrapper>
-      <LoginPageContainer>
+      <UserPageContainer>
         <BookWrapper>
           <UlHorizontal>
             <LiBook>
@@ -26,7 +26,7 @@ function LoginPage() {
             </LiBook>
           </UlHorizontal>
         </BookWrapper>
-      </LoginPageContainer>
+      </UserPageContainer>
     </UserPageWrapper>
   );
 }

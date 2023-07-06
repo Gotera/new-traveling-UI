@@ -2,8 +2,8 @@ import React from "react";
 import {
   FieldsWrapper,
   LoginInput,
-  LoginTittle,
-  LoginWrapper,
+  UserTittle,
+  UserWrapper,
   SubmitButton,
 } from "./LoginBoard.style";
 import { Li, Ul } from "../../HistoryContent/Components/DataUI/DataUI.style";
@@ -16,10 +16,10 @@ import {
 
 function LoginPainel() {
   return (
-    <LoginWrapper>
-      <LoginTittle>
+    <UserWrapper>
+      <UserTittle>
         <h2>Login</h2>
-      </LoginTittle>
+      </UserTittle>
       <FieldsWrapper>
         <form>
           <Ul>
@@ -50,7 +50,7 @@ function LoginPainel() {
           </Ul>
         </form>
       </FieldsWrapper>
-    </LoginWrapper>
+    </UserWrapper>
   );
 }
 

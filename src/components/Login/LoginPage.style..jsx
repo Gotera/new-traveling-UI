@@ -9,7 +9,7 @@ export const UserPageWrapper = styled.div`
   align-items: center;
 `;
 
-export const LoginPageContainer = styled.div`
+export const UserPageContainer = styled.div`
   position: absolute;
   z-index: 1;
 `;

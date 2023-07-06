@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../../App.style";
 
-export const LoginWrapper = styled.div`
+export const UserWrapper = styled.div`
   position: relative;
   padding: 4rem;
   border-radius: 0.8rem;
@@ -16,7 +16,7 @@ export const LoginWrapper = styled.div`
   align-items: center;
 `;
 
-export const LoginTittle = styled.div`
+export const UserTittle = styled.div`
   font-family: "Roboto Mono", monospace, Circular, -apple-system,
     BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   padding: 1.5rem 2rem;
