@@ -14,6 +14,13 @@ export const UserWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 370px) {
+    padding: 3rem;
+  }
+  @media (max-width: 330px) {
+    height: 28rem;
+    padding: 1.1rem;
+  }
 `;
 
 export const UserTittle = styled.div`
@@ -26,7 +33,7 @@ export const UserTittle = styled.div`
   background-color: ${colors.babyBlue};
   border: 2px solid ${colors.white};
   position: absolute;
-  bottom: 94%;
+  bottom: 93%;
 `;
 
 export const FieldsWrapper = styled.div`
@@ -54,6 +61,10 @@ export const FieldsWrapper = styled.div`
         transform: translateY(-3px);
         box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
       }
+    }
+    @media (max-width: 500px) {
+      flex-direction: column;
+      align-items: center;
     }
   }
   Li:nth-child(4) {

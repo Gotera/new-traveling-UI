@@ -2,10 +2,10 @@ import React from "react";
 import {
   FieldsWrapper,
   LoginInput,
-  LoginTittle,
-  LoginWrapper,
+  UserTittle,
+  UserWrapper,
   SubmitButton,
-} from "./LoginBoard.style";
+} from "../../Login/components/LoginBoard.style";
 import { Li, Ul } from "../../HistoryContent/Components/DataUI/DataUI.style";
 import { BiUser } from "react-icons/bi";
 import {
@@ -16,10 +16,10 @@ import {
 
 function RegisterPainel() {
   return (
-    <LoginWrapper>
-      <LoginTittle>
-        <h2>Login</h2>
-      </LoginTittle>
+    <UserWrapper>
+      <UserTittle>
+        <h2>Registrar-se</h2>
+      </UserTittle>
       <FieldsWrapper>
         <form>
           <Ul>
@@ -40,12 +40,12 @@ function RegisterPainel() {
               <LoginInput type="password" placeholder="Confirme a Senha" />
             </Li>
             <Li>
-              <SubmitButton>Entrar</SubmitButton>
+              <SubmitButton>Registrar</SubmitButton>
             </Li>
           </Ul>
         </form>
       </FieldsWrapper>
-    </LoginWrapper>
+    </UserWrapper>
   );
 }
 

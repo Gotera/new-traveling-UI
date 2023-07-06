@@ -46,4 +46,7 @@ export const UlHorizontal = styled.ul`
   @media (max-width: 1100px) {
     gap: 0;
   }
+  @media (max-width: 450px) {
+    padding: 1rem;
+  }
 `;

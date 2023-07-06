@@ -7,12 +7,7 @@ import {
   SubmitButton,
 } from "./LoginBoard.style";
 import { Li, Ul } from "../../HistoryContent/Components/DataUI/DataUI.style";
-import { BiUser } from "react-icons/bi";
-import {
-  HiOutlineMail,
-  HiOutlineLockOpen,
-  HiOutlineLockClosed,
-} from "react-icons/hi";
+import { HiOutlineMail, HiOutlineLockClosed } from "react-icons/hi";
 
 function LoginPainel() {
   return (
