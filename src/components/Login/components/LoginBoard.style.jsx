@@ -41,17 +41,11 @@ export const FieldsWrapper = styled.div`
     "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
-  .React_Icon {
-    z-index: 1;
-    padding: 0.8rem 4px;
-    position: absolute;
-    color: ${colors.darkGrey};
-  }
   Li:nth-child(3) {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: end;
+    align-items: center;
     color: ${colors.white};
     p {
       cursor: pointer;
@@ -59,7 +53,6 @@ export const FieldsWrapper = styled.div`
       &:hover,
       &:focus {
         transform: translateY(-3px);
-        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
       }
     }
     @media (max-width: 500px) {
@@ -81,7 +74,7 @@ export const FieldsWrapper = styled.div`
   }
 `;
 
-export const LoginInput = styled.input`
+export const InputContainer = styled.div`
   height: 3rem;
   padding: 4px;
   padding-left: 1.5rem;
@@ -92,10 +85,28 @@ export const LoginInput = styled.input`
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
     "Helvetica Neue", sans-serif;
   font-size: 1rem;
+  background-color: ${colors.white};
   &:hover,
   &:focus {
     transform: translateY(-3px);
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  }
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  .React_Icon {
+    z-index: 1;
+    padding: 0.8rem 4px;
+    /* position: absolute; */
+    color: ${colors.darkGrey};
+  }
+`;
+
+export const LoginInput = styled.input.attrs({ type: "text" })`
+  &:hover,
+  &:focus {
+    border: none;
   }
 `;
 

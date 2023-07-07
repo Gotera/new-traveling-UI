@@ -5,6 +5,7 @@ import {
   UserTittle,
   UserWrapper,
   SubmitButton,
+  InputContainer,
 } from "./LoginBoard.style";
 import { Li, Ul } from "../../HistoryContent/Components/DataUI/DataUI.style";
 import { HiOutlineMail, HiOutlineLockClosed } from "react-icons/hi";
@@ -19,12 +20,15 @@ function LoginPainel() {
         <form>
           <Ul>
             <Li>
-              <HiOutlineMail className="React_Icon" />
-              <LoginInput type="email" placeholder="Email" />
+              <InputContainer>
+                <HiOutlineMail className="React_Icon" /> teste
+              </InputContainer>
             </Li>
             <Li>
-              <HiOutlineLockClosed className="React_Icon" />
-              <LoginInput type="password" placeholder="Senha" />
+              <InputContainer>
+                <HiOutlineLockClosed className="React_Icon" />
+                <LoginInput type="password" placeholder="Senha" />
+              </InputContainer>
             </Li>
             <Li>
               <p>
