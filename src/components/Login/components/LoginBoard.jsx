@@ -21,7 +21,8 @@ function LoginPainel() {
           <Ul>
             <Li>
               <InputContainer>
-                <HiOutlineMail className="React_Icon" /> teste
+                <HiOutlineMail className="React_Icon" />
+                <LoginInput type="email" placeholder="Email" />
               </InputContainer>
             </Li>
             <Li>
@@ -31,16 +32,22 @@ function LoginPainel() {
               </InputContainer>
             </Li>
             <Li>
-              <p>
-                <input type="checkbox" /> Lembrar
+              <p htmlfor="checkbox">
+                <label>
+                  <input
+                    id="checkbox"
+                    type="checkbox"
+                  />
+                  Lembrar
+                </label>
               </p>
               <p>
-                <a>Esqueceu a Senha?</a>
+                <a href="/">Esqueceu a Senha?</a>
               </p>
             </Li>
             <Li>
               <p>
-                <a>Ainda não possui uma conta?</a>
+                <a href="/register">Ainda não possui uma conta?</a>
               </p>
             </Li>
             <Li>

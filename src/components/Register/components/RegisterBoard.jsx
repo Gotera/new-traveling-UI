@@ -5,6 +5,7 @@ import {
   UserTittle,
   UserWrapper,
   SubmitButton,
+  InputContainer,
 } from "../../Login/components/LoginBoard.style";
 import { Li, Ul } from "../../HistoryContent/Components/DataUI/DataUI.style";
 import { BiUser } from "react-icons/bi";
@@ -24,20 +25,28 @@ function RegisterPainel() {
         <form>
           <Ul>
             <Li>
-              <BiUser className="React_Icon" />
-              <LoginInput type="name" placeholder="Nome"></LoginInput>
+              <InputContainer>
+                <BiUser className="React_Icon" />
+                <LoginInput type="name" placeholder="Nome"></LoginInput>
+              </InputContainer>
             </Li>
             <Li>
-              <HiOutlineMail className="React_Icon" />
-              <LoginInput type="email" placeholder="Email" />
+              <InputContainer>
+                <HiOutlineMail className="React_Icon" />
+                <LoginInput type="email" placeholder="Email" />
+              </InputContainer>
             </Li>
             <Li>
-              <HiOutlineLockClosed className="React_Icon" />
-              <LoginInput type="password" placeholder="Senha" />
+              <InputContainer>
+                <HiOutlineLockClosed className="React_Icon" />
+                <LoginInput type="password" placeholder="Senha" />
+              </InputContainer>
             </Li>
             <Li>
-              <HiOutlineLockOpen className="React_Icon" />
-              <LoginInput type="password" placeholder="Confirme a Senha" />
+              <InputContainer>
+                <HiOutlineLockOpen className="React_Icon" />
+                <LoginInput type="password" placeholder="Confirme a Senha" />
+              </InputContainer>
             </Li>
             <Li>
               <SubmitButton>Registrar</SubmitButton>

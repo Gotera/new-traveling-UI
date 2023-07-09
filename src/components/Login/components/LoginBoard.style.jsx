@@ -41,20 +41,21 @@ export const FieldsWrapper = styled.div`
     "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: 500;
+  p {
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    &:hover,
+    &:focus {
+      transform: translateY(-3px);
+    }
+  }
   Li:nth-child(3) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     color: ${colors.white};
-    p {
-      cursor: pointer;
-      text-align: center;
-      &:hover,
-      &:focus {
-        transform: translateY(-3px);
-      }
-    }
     @media (max-width: 500px) {
       flex-direction: column;
       align-items: center;
@@ -63,21 +64,16 @@ export const FieldsWrapper = styled.div`
   Li:nth-child(4) {
     color: ${colors.white};
     p {
-      cursor: pointer;
       text-align: center;
       &:hover,
       &:focus {
         transform: translateY(-3px);
-        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
       }
     }
   }
 `;
 
 export const InputContainer = styled.div`
-  height: 3rem;
-  padding: 4px;
-  padding-left: 1.5rem;
   border: 0;
   outline: 0;
   border-bottom: 4px solid ${colors.babyBlue};
@@ -85,16 +81,15 @@ export const InputContainer = styled.div`
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
     "Helvetica Neue", sans-serif;
   font-size: 1rem;
-  background-color: ${colors.white};
-  &:hover,
-  &:focus {
-    transform: translateY(-3px);
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-  }
   display: flex;
   flex-direction: row;
   text-align: center;
   align-items: center;
+  background-color: ${colors.white};
+  &:hover,
+  &:focus {
+    transform: translateY(-3px);
+  }
   .React_Icon {
     z-index: 1;
     padding: 0.8rem 4px;
@@ -103,11 +98,9 @@ export const InputContainer = styled.div`
   }
 `;
 
-export const LoginInput = styled.input.attrs({ type: "text" })`
-  &:hover,
-  &:focus {
-    border: none;
-  }
+export const LoginInput = styled.input`
+  all: unset;
+  text-align: start;
 `;
 
 export const SubmitButton = styled.button`
