@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 import { useApi } from "../../hooks/useApi";
 
 export const AuthContext = createContext();
+AuthContext.displayName = "Login";
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);

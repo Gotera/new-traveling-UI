@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import {
   FieldsWrapper,
   LoginInput,
@@ -9,8 +9,17 @@ import {
 } from "./LoginBoard.style";
 import { Li, Ul } from "../../HistoryContent/Components/DataUI/DataUI.style";
 import { HiOutlineMail, HiOutlineLockClosed } from "react-icons/hi";
+import { AuthContext } from "../../../common/contexts/Auth/AuthContext";
 
 function LoginPainel() {
+  const auth = useContext(AuthContext);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  // handleLogin = async () => {
+  //   if (email && password) {
+  //     const isLogged = await auth.signin(email, password);
+  //   }
+  // };
   return (
     <UserWrapper>
       <UserTittle>
@@ -22,22 +31,27 @@ function LoginPainel() {
             <Li>
               <InputContainer>
                 <HiOutlineMail className="React_Icon" />
-                <LoginInput type="email" placeholder="Email" />
+                <LoginInput
+                  type="email"
+                  placeholder="Email"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </InputContainer>
             </Li>
             <Li>
               <InputContainer>
                 <HiOutlineLockClosed className="React_Icon" />
-                <LoginInput type="password" placeholder="Senha" />
+                <LoginInput
+                  type="password"
+                  placeholder="Senha"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
               </InputContainer>
             </Li>
             <Li>
-              <p htmlfor="checkbox">
+              <p htmlFor="checkbox">
                 <label>
-                  <input
-                    id="checkbox"
-                    type="checkbox"
-                  />
+                  <input id="checkbox" type="checkbox" />
                   Lembrar
                 </label>
               </p>
