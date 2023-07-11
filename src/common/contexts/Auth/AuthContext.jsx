@@ -1,7 +1,7 @@
 import { createContext, useState } from "react";
 import { useApi } from "../../hooks/useApi";
 
-export const AuthContext = createContext();
+export const AuthContext = createContext(null);
 AuthContext.displayName = "Login";
 
 export const AuthProvider = ({ children }) => {
