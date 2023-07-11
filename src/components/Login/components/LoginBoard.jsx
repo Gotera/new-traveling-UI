@@ -10,16 +10,23 @@ import {
 import { Li, Ul } from "../../HistoryContent/Components/DataUI/DataUI.style";
 import { HiOutlineMail, HiOutlineLockClosed } from "react-icons/hi";
 import { AuthContext } from "../../../common/contexts/Auth/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function LoginPainel() {
   const auth = useContext(AuthContext);
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // handleLogin = async () => {
-  //   if (email && password) {
-  //     const isLogged = await auth.signin(email, password);
-  //   }
-  // };
+  const handleLogin = async () => {
+    if (email && password) {
+      const isLogged = await auth.signin(email, password);
+      if (isLogged) {
+        navigate('/')
+      } else {
+        alert("Não Logou")
+      }
+    }
+  };
   return (
     <UserWrapper>
       <UserTittle>
