@@ -17,13 +17,14 @@ function LoginPainel() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleLogin = async () => {
+  const handleLogin = async (e) => {
+    e.preventDefault();
     if (email && password) {
       const isLogged = await auth.signin(email, password);
       if (isLogged) {
-        navigate('/')
+        alert("Não Logou");
       } else {
-        alert("Não Logou")
+        navigate("/");
       }
     }
   };
@@ -39,8 +40,10 @@ function LoginPainel() {
               <InputContainer>
                 <HiOutlineMail className="React_Icon" />
                 <LoginInput
+                  required
                   type="email"
                   placeholder="Email"
+                  value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </InputContainer>
@@ -49,8 +52,10 @@ function LoginPainel() {
               <InputContainer>
                 <HiOutlineLockClosed className="React_Icon" />
                 <LoginInput
+                  required
                   type="password"
                   placeholder="Senha"
+                  value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </InputContainer>
@@ -72,7 +77,7 @@ function LoginPainel() {
               </p>
             </Li>
             <Li>
-              <SubmitButton>Entrar</SubmitButton>
+              <SubmitButton onClick={handleLogin}>Entrar</SubmitButton>
             </Li>
           </Ul>
         </form>
