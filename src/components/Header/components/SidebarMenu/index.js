@@ -1,7 +1,12 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import { Label, SideBarInput, SidebarBody, SidebarWrapper } from './Sidebar.style';
-import { AiOutlineHistory } from 'react-icons/ai';
-import { BsFillClipboardDataFill } from 'react-icons/bs';
+import {
+  Label,
+  SideBarInput,
+  SidebarBody,
+  SidebarWrapper,
+} from "./Sidebar.style";
+import { AiOutlineHistory } from "react-icons/ai";
+import { BsFillClipboardDataFill } from "react-icons/bs";
 
 function Sidebar() {
   return (

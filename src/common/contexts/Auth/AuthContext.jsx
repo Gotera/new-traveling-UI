@@ -11,7 +11,8 @@ export const AuthProvider = ({ children }) => {
   const signin = async (email, password) => {
     const data = await api.signin(email, password);
     if (data.user && data.token) {
-      setUser(data.user);
+      setUser(data.data.email);
+      console.log(user)
       return true;
     }
     return false;

@@ -9,11 +9,9 @@ import UserProvider from "./common/contexts/User";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import { RequireAuth } from "./common/contexts/Auth/RequireAuth";
-import { AuthContext, AuthProvider } from "./common/contexts/Auth/AuthContext";
-import { useContext } from "react";
+import { AuthProvider } from "./common/contexts/Auth/AuthContext";
 
 function AppRouter() {
-  // const auth = useContext(AuthContext);
   return (
     <Router>
       <Header />
@@ -23,7 +21,6 @@ function AppRouter() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            {/* {auth.user && *RENDER LOGOUT METHOD*} */}
           </Routes>
           <Routes>
             <Route
