@@ -9,11 +9,8 @@ function Header() {
     <HeaderWrapper>
       <Sidebar />
       <label>Header</label>
-      {console.log(auth)}
-      <label>{auth?.data.email && <a href="/">Sair</a>}</label>
-      <label>{auth?.data?.email}</label>
     </HeaderWrapper>
   );
 }
 
-export default memo(Header);
+export default Header;

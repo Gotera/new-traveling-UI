@@ -6,7 +6,7 @@ const api = axios.create({
 
 export const useApi = () => ({
   validateToken: async (token) => {
-    const response = await api.post("/validade", { token });
+    const response = await api.post(`${process.env.REACT_APP_API_URL}/validade`, { token });
     return response.data;
   },
   signin: async (email, password) => {
@@ -14,7 +14,6 @@ export const useApi = () => ({
       email,
       password
     });
-    console.log(response);
     return response.data;
   },
   logout: async () => {

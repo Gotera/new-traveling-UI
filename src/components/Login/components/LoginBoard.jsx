@@ -22,9 +22,9 @@ function LoginPainel() {
     if (email && password) {
       const isLogged = await auth.signin(email, password);
       if (isLogged) {
-        alert("Não Logou");
-      } else {
         navigate("/");
+      } else {
+        alert("Não Logou");
       }
     }
   };

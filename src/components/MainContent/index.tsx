@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+// import { AuthContext } from "../../common/contexts/Auth/AuthContext.jsx";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Button,
@@ -59,8 +60,11 @@ function JorneyForm() {
     await axios.post(url, data);
     alert("Viagem Cadastrada!");
   }
+  // const auth = useContext(AuthContext);
   return (
     <JorneyFormWrapper>
+      {/* <label>{auth.user && <a href="/">Sair</a>}</label>
+      {auth.user && <label>Olá {auth.user?.name}</label>} */}
       <form onSubmit={handleSubmit(createUser)}>
         <h2>Cadastro de Viagem</h2>
         <Ul>
