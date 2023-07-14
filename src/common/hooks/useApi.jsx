@@ -6,7 +6,7 @@ const api = axios.create({
 
 export const useApi = () => ({
   validateToken: async (token) => {
-    const response = await api.post(`${process.env.REACT_APP_API_URL}/validade`, { token });
+    const response = await api.post(`${process.env.REACT_APP_API_URL}/user/:id`, { token });
     return response.data;
   },
   signin: async (email, password) => {

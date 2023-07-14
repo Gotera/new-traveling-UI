@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-// import { AuthContext } from "../../common/contexts/Auth/AuthContext.jsx";
+import { AuthContext } from "../../common/contexts/Auth/AuthContext.jsx";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Button,
@@ -14,6 +14,7 @@ import {
   // @ts-ignore
 } from "./JorneyForm.style.jsx";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const createUserFormSchema = z.object({
   nota_fiscal: z.coerce.number({
     required_error: "O campo de destino é obrigatório.",
@@ -47,6 +48,7 @@ const createUserFormSchema = z.object({
 type createUserFormData = z.infer<typeof createUserFormSchema>;
 
 function JorneyForm() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -55,16 +57,27 @@ function JorneyForm() {
     resolver: zodResolver(createUserFormSchema),
   });
 
+  const handleLogout = async () => {
+    await auth.signout();
+    navigate('/')
+  };
+
   async function createUser(data: any) {
     const url = `${process.env.REACT_APP_API_URL}/register`;
     await axios.post(url, data);
     alert("Viagem Cadastrada!");
   }
-  // const auth = useContext(AuthContext);
+  const auth = useContext(AuthContext);
   return (
     <JorneyFormWrapper>
-      {/* <label>{auth.user && <a href="/">Sair</a>}</label>
-      {auth.user && <label>Olá {auth.user?.name}</label>} */}
+      <label>
+        {auth.user && (
+          <a href="/" onClick={handleLogout}>
+            Sair
+          </a>
+        )}
+      </label>
+      {auth.user && <label>Olá {auth.user?.name}</label>}
       <form onSubmit={handleSubmit(createUser)}>
         <h2>Cadastro de Viagem</h2>
         <Ul>

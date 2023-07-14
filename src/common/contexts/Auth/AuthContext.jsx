@@ -14,20 +14,20 @@ export const AuthProvider = ({ children }) => {
       if (storageData) {
         const data = await api.validateToken(storageData);
         if (data.user) {
-          setUser(data.userResult);
+          setUser(data.user);
         }
       }
     };
     validateToken();
   }, [api]);
-  
+
   const signin = async (email, password) => {
     const data = await api.signin(email, password);
     if (data.userResult && data.token) {
-      console.log(data);
       setUser(data.userResult);
       setToken(data.token);
       alert(data.msg);
+      console.log(data);
       return true;
     }
     return false;
@@ -36,6 +36,7 @@ export const AuthProvider = ({ children }) => {
   const signout = async () => {
     await api.logout();
     setUser(null);
+    setToken('')
   };
 
   const setToken = (token) => {
