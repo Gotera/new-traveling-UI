@@ -3,7 +3,7 @@ const token = localStorage.getItem("authToken");
 const api = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
   headers: {
-    authorization: "Bearer " + token,
+    authorization: "Bearer" + token,
   },
 });
 

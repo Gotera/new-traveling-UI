@@ -13,10 +13,11 @@ export const AuthProvider = ({ children }) => {
       const data = await api.validateToken();
       if (data.user) {
         setUser(data.user);
+        setToken(data.token);
       }
     };
-    validateToken()
-  }, []);
+    validateToken();
+  }, [setUser]);
 
   const signin = async (email, password) => {
     const data = await api.signin(email, password);
@@ -31,7 +32,6 @@ export const AuthProvider = ({ children }) => {
   };
 
   const signout = async () => {
-    await api.logout();
     setUser(null);
     setToken("");
   };
