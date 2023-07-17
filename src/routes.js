@@ -15,8 +15,8 @@ import { AuthProvider } from "./common/contexts/Auth/AuthContext";
 function AppRouter() {
   return (
     <Router>
-      <Header />
       <AuthProvider>
+        <Header />
         <UserProvider>
           <Routes>
             <Route path="/" element={<Home />} />
