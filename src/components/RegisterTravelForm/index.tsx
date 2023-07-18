@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 // import { AuthContext } from "../../common/contexts/Auth/AuthContext.jsx";
@@ -14,7 +14,6 @@ import {
   // @ts-ignore
 } from "./JorneyForm.style.jsx";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 const createUserFormSchema = z.object({
   nota_fiscal: z.coerce.number({
     required_error: "O campo de destino é obrigatório.",
@@ -48,7 +47,6 @@ const createUserFormSchema = z.object({
 type createUserFormData = z.infer<typeof createUserFormSchema>;
 
 function JorneyForm() {
-  // const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -63,10 +61,8 @@ function JorneyForm() {
     await axios.post(url, data);
     alert("Viagem Cadastrada!");
   }
-  // const auth = useContext(AuthContext);
   return (
     <JorneyFormWrapper>
-
       <form onSubmit={handleSubmit(createUser)}>
         <h2>Cadastro de Viagem</h2>
         <Ul>

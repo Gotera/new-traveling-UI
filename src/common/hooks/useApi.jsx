@@ -3,13 +3,14 @@ const token = localStorage.getItem("authToken");
 const api = axios.create({
   baseURL: process.env.REACT_APP_API_URL,
   headers: {
-    authorization: "Bearer" + token,
+    authorization: "Bearer " + token,
   },
 });
 
 export const useApi = () => ({
   validateToken: async () => {
     const response = await api.get(`${process.env.REACT_APP_API_URL}/user`);
+    console.log(response.data);
     return response.data;
   },
   signin: async (email, password) => {

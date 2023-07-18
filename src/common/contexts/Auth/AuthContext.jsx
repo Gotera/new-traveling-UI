@@ -14,10 +14,12 @@ export const AuthProvider = ({ children }) => {
       if (data.user) {
         setUser(data.user);
         setToken(data.token);
+      } else {
+        console.log("Não Existe", data.user);
       }
     };
     validateToken();
-  }, [setUser]);
+  });
 
   const signin = async (email, password) => {
     const data = await api.signin(email, password);
@@ -34,6 +36,7 @@ export const AuthProvider = ({ children }) => {
   const signout = async () => {
     setUser(null);
     setToken("");
+    await api.logout();
   };
 
   const setToken = (token) => {
