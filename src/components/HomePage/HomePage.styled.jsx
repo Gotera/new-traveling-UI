@@ -46,3 +46,10 @@ export const Apresentation = styled.div`
     color: ${colors.white};
   }
 `;
+
+export const ProductWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+`;

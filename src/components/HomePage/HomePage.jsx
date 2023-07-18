@@ -5,9 +5,11 @@ import {
   AboutWrapper,
   Apresentation,
   HomePageWrapper,
+  ProductWrapper,
   SubTittle,
 } from "./HomePage.styled";
-
+import { ProductCellWrapper } from "./components/ProductCell/ProductCell.styled";
+import { BsDatabaseFillLock } from "react-icons/bs";
 function HomePage() {
   return (
     <>
@@ -25,6 +27,10 @@ function HomePage() {
               focar na estrada, enquanto nós cuidamos do resto.
             </p>
           </Apresentation>
+          <ProductWrapper>
+            <SubTittle>Produto</SubTittle>
+            <ProductCellWrapper  name="teste" />
+          </ProductWrapper>
         </AboutWrapper>
       </HomePageWrapper>
     </>
