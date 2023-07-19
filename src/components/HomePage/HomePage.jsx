@@ -1,9 +1,9 @@
 import React from "react";
-import TruckImage1 from "../../assets/Home/TruckImage1.jpg";
 import BlueLogo from "../../assets/Home/BlueLogo.png";
 import {
   AboutWrapper,
   Apresentation,
+  BannerHolder,
   HomePageWrapper,
   ProductWrapper,
   SubTittle,
@@ -14,7 +14,7 @@ function HomePage() {
   return (
     <>
       <HomePageWrapper>
-        <img src={TruckImage1} className="TruckBanner" />
+        <BannerHolder />
         <AboutWrapper>
           <SubTittle>Sobre Nós</SubTittle>
           <Apresentation>
@@ -29,7 +29,7 @@ function HomePage() {
           </Apresentation>
           <ProductWrapper>
             <SubTittle>Produto</SubTittle>
-            <ProductCellWrapper  name="teste" />
+            <ProductCellWrapper name="teste" />
           </ProductWrapper>
         </AboutWrapper>
       </HomePageWrapper>

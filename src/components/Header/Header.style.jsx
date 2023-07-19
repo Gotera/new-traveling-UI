@@ -11,7 +11,6 @@ export const HeaderWrapper = styled.div`
   justify-content: space-between;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  position: ab;
 `;
 
 export const HeaderWrapperBars = styled.div`

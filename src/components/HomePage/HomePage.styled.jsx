@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { colors } from "../../App.style";
+import TruckImage1 from "../../assets/Home/TruckImage1.jpg";
 
 export const HomePageWrapper = styled.div`
   margin: 0 auto;
   max-width: 1920px;
-  background-color: ${colors.babyBlue};
-  img {
+
+  /* img {
     &.TruckBanner {
       width: 100%;
       height: 40rem;
@@ -13,7 +14,16 @@ export const HomePageWrapper = styled.div`
       bottom: 0;
       object-position: center;
     }
-  }
+  } */
+`;
+
+export const BannerHolder = styled.div`
+  height: calc(100vh - 100px);
+  background-color: ${colors.babyBlue};
+  background-image: url(${TruckImage1});
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 `;
 
 export const AboutWrapper = styled.div`
@@ -21,6 +31,7 @@ export const AboutWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: ${colors.babyBlue};
 `;
 
 export const SubTittle = styled.h2`
