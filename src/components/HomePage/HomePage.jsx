@@ -4,22 +4,37 @@ import {
   AboutWrapper,
   Apresentation,
   BannerHolder,
+  BannerTextWrapper,
   HomePageWrapper,
   ProductWrapper,
   SubTittle,
 } from "./HomePage.styled";
 import { ProductCellWrapper } from "./components/ProductCell/ProductCell.styled";
 import { BsDatabaseFillLock } from "react-icons/bs";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 function HomePage() {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <>
       <HomePageWrapper>
-        <BannerHolder />
-        <AboutWrapper>
-          <SubTittle>Sobre Nós</SubTittle>
-          <Apresentation>
+        <BannerHolder>
+          <BannerTextWrapper>
+            <p>Na rota do progresso</p>
+            <p>Em direção ao sucesso</p>
+            <p>Entregas sem preocupações</p>
+            <p>Só na</p>
             <img src={BlueLogo} id="BlueLogo" />
-            <p>
+          </BannerTextWrapper>
+        </BannerHolder>
+        <AboutWrapper>
+          <SubTittle data-aos="fade-up">Sobre Nós</SubTittle>
+          <Apresentation>
+            <img src={BlueLogo} id="BlueLogo" data-aos="fade-right" />
+            <p data-aos="fade-left">
               {" "}
               Nosso compromisso é registrar meticulosamente os dados de suas
               viagens, cuidando de suas contas suas, proporcionando uma gestão
@@ -28,7 +43,7 @@ function HomePage() {
             </p>
           </Apresentation>
           <ProductWrapper>
-            <SubTittle>Produto</SubTittle>
+            <SubTittle data-aos="fade-right">Produto</SubTittle>
             <ProductCellWrapper name="teste" />
           </ProductWrapper>
         </AboutWrapper>

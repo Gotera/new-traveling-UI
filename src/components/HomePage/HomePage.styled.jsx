@@ -19,11 +19,22 @@ export const HomePageWrapper = styled.div`
 
 export const BannerHolder = styled.div`
   height: calc(100vh - 100px);
+  color: ${colors.white};
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
   background-color: ${colors.babyBlue};
   background-image: url(${TruckImage1});
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const BannerTextWrapper = styled.div`
+  margin: calc(50vh - 100px) 6%;
 `;
 
 export const AboutWrapper = styled.div`
