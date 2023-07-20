@@ -9,11 +9,14 @@ import {
   ProductWrapper,
   SubTittle,
 } from "./HomePage.styled";
-import { ProductCellWrapper } from "./components/ProductCell/ProductCell.styled";
-import { BsDatabaseFillLock } from "react-icons/bs";
+import { BsDatabaseFillLock, BsFillClipboard2PulseFill } from "react-icons/bs";
+import { GiTimeTrap } from "react-icons/gi";
+import { AiFillCalculator, AiFillMobile, AiFillSecurityScan } from "react-icons/ai";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import TypewriterComponent from "typewriter-effect";
+import ProductCell from "./components/ProductCell/ProductCell";
 function HomePage() {
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -23,11 +26,22 @@ function HomePage() {
       <HomePageWrapper>
         <BannerHolder>
           <BannerTextWrapper>
-            <p>Na rota do progresso</p>
+            <TypewriterComponent
+              options={{
+                strings: [
+                  "Na rota do progresso",
+                  "Em direção ao sucesso",
+                  "Entregas sem preocupações",
+                ],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+            {/* <p>Na rota do progresso</p>
             <p>Em direção ao sucesso</p>
             <p>Entregas sem preocupações</p>
             <p>Só na</p>
-            <img src={BlueLogo} id="BlueLogo" />
+            <img src={BlueLogo} id="BlueLogo" /> */}
           </BannerTextWrapper>
         </BannerHolder>
         <AboutWrapper>
@@ -43,8 +57,37 @@ function HomePage() {
             </p>
           </Apresentation>
           <ProductWrapper>
-            <SubTittle data-aos="fade-right">Produto</SubTittle>
-            <ProductCellWrapper name="teste" />
+            <SubTittle data-aos="fade-up">Produto</SubTittle>
+            <ProductCell
+              icon={<BsDatabaseFillLock size={60} />}
+              title="Relatórios Detalhados"
+              message="Acesse relatórios completos e detalhados de cada viagem, com informações cruciais para otimizar suas operações."
+            />
+            <ProductCell
+              icon={<GiTimeTrap size={60} />}
+              title="Economia de Tempo"
+              message="Simplifique a gestão de dados de viagens com nosso sistema eficiente, economizando tempo valioso."
+            />
+            <ProductCell
+              icon={<BsFillClipboard2PulseFill size={60} />}
+              title="Organização Eficiente"
+              message="Mantenha todas as informações importantes sobre suas viagens em um só lugar, mantendo seus registros organizados e acessíveis."
+            />
+            <ProductCell
+              icon={<AiFillCalculator size={60} />}
+              title="Cálculos Automatizados"
+              message="Nosso sistema realiza cálculos complexos automaticamente, como o custo total de combustível, ajudando você a tomar decisões informadas."
+            />
+            <ProductCell
+              icon={<AiFillMobile size={60} />}
+              title="Acesso em Qualquer Lugar"
+              message="Acesse seus dados de viagens a qualquer momento e de qualquer lugar, com nossa plataforma online e amigável."
+            />
+            <ProductCell
+              icon={<AiFillSecurityScan size={60} />}
+              title="Privacidade e Segurança"
+              message="Garantimos a privacidade e a segurança dos seus dados, permitindo que você gerencie suas informações com tranquilidade."
+            />
           </ProductWrapper>
         </AboutWrapper>
       </HomePageWrapper>

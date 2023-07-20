@@ -23,7 +23,7 @@ export const BannerHolder = styled.div`
   font-size: 2rem;
   letter-spacing: 1rem;
   font-family: "Poppins", sans-serif;
-  font-weight: 800;
+  font-weight: 200;
   background-color: ${colors.babyBlue};
   background-image: url(${TruckImage1});
   background-repeat: no-repeat;
@@ -70,8 +70,17 @@ export const Apresentation = styled.div`
 `;
 
 export const ProductWrapper = styled.div`
+  gap: 1rem;
+  flex-wrap: wrap;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  /* @media (max-width: 1100px) {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    border-radius: 0;
+  } */
 `;
