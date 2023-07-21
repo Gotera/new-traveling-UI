@@ -10,7 +10,7 @@ import {
   LiCircles,
 } from "./LoginPage.style.";
 import LoginBoard from "./components/LoginBoard";
-import SVGIcon from "../../assets/Login/undraw_delivery_truck_vt6p.svg";
+import SVGIcon from "assets/Login/undraw_delivery_truck_vt6p.svg";
 
 function LoginPage() {
   return (

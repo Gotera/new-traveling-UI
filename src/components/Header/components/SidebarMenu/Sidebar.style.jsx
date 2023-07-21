@@ -9,7 +9,6 @@ export const SidebarWrapper = styled.div`
 
 export const Label = styled.label`
   width: 40px;
-  height: min-content;
   right: 1rem;
   z-index: 1;
   cursor: pointer;

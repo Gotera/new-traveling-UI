@@ -1,20 +1,10 @@
 import styled from "styled-components";
 import { colors } from "../../App.style";
-import TruckImage1 from "../../assets/Home/TruckImage1.jpg";
+import TruckImage1 from "assets/Home/TruckImage1.jpg";
 
 export const HomePageWrapper = styled.div`
   margin: 0 auto;
   max-width: 1920px;
-
-  /* img {
-    &.TruckBanner {
-      width: 100%;
-      height: 40rem;
-      object-fit: cover;
-      bottom: 0;
-      object-position: center;
-    }
-  } */
 `;
 
 export const BannerHolder = styled.div`
@@ -31,6 +21,9 @@ export const BannerHolder = styled.div`
   background-size: cover;
   display: flex;
   flex-direction: column;
+  @media (max-width: 800px) {
+    background-position: center;
+  }
 `;
 
 export const BannerTextWrapper = styled.div`
@@ -42,7 +35,10 @@ export const AboutWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  gap: 2rem;
   background-color: ${colors.babyBlue};
+  padding: 0 5% 0 5%;
 `;
 
 export const SubTittle = styled.h2`
@@ -53,14 +49,32 @@ export const SubTittle = styled.h2`
 `;
 
 export const Apresentation = styled.div`
-  width: 80%;
   display: flex;
   justify-content: center;
   flex-direction: row;
   text-align: center;
   align-items: center;
+  width: 0 auto;
+  text-indent: 5em;
+  gap: 4rem;
+
+  @media (max-width: 880px) {
+    display: flex;
+    flex-direction: column;
+    width: 80% auto;
+
+    p {
+      width: 100%;
+      order: 1;
+    }
+
+    img {
+      order: 2;
+    }
+  }
 
   p {
+    width: 50%;
     font-family: "Poppins", sans-serif;
     font-size: 1.5rem;
     letter-spacing: 1.8px;
@@ -70,17 +84,17 @@ export const Apresentation = styled.div`
 `;
 
 export const ProductWrapper = styled.div`
-  gap: 1rem;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /* @media (max-width: 1100px) {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: calc(100vh - 100px);
-    border-radius: 0;
-  } */
+  padding: 0 5% 0 5%;
+`;
+
+export const DisplayMany = styled.div`
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `;

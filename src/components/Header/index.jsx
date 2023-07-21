@@ -1,7 +1,7 @@
 import { memo, useContext } from "react";
 import Sidebar from "./components/SidebarMenu/index";
 import { HeaderWrapper } from "./Header.style.jsx";
-import { AuthContext } from "../../common/contexts/Auth/AuthContext";
+import { AuthContext } from "common/contexts/Auth/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 function Header() {
