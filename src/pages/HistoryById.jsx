@@ -1,6 +1,8 @@
+import React from "react";
 import JorneyForm from "components/RegisterTravelForm";
 
-function RegisterTravel() {
+function HistoryById() {
   return <JorneyForm />;
 }
-export default RegisterTravel;
+
+export default HistoryById;

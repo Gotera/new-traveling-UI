@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../App.style";
+import { colors } from "App.style";
 
 export const UserPageWrapper = styled.div`
   height: calc(100vh - 100px);

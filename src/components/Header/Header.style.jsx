@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../App.style";
+import { colors } from "App.style";
 
 export const HeaderWrapper = styled.div`
   height: 100px;

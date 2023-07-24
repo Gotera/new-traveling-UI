@@ -2,7 +2,7 @@ import React from "react";
 import { RiPencilFill } from "react-icons/ri";
 import { BsTrashFill } from "react-icons/bs";
 import { format } from "date-fns";
-import { useUserContext } from "../../../../common/contexts/User";
+import { useUserContext } from "common/contexts/User";
 import {
   HistoryCellWrapper,
   DataUiWrapper,

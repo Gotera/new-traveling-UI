@@ -5,7 +5,7 @@
 import { useContext } from "react";
 import { RiPencilFill } from "react-icons/ri";
 import { format, parseISO } from "date-fns";
-import { UserContext, useUserContext } from "../../../../common/contexts/User";
+import { UserContext, useUserContext } from "common/contexts/User";
 import {
   HistoryCellWrapper,
   DataUiWrapper,
@@ -14,7 +14,7 @@ import {
   ContentData,
   CustomDataInput,
   CustomNotaFiscalInput,
-} from "./DataUI.style";
+} from "components/TravelsHistory/components/DataUI/DataUI.style";
 
 function UpdateLayout({ travel }) {
   const {

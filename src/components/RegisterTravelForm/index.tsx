@@ -9,9 +9,9 @@ import {
   ErrorMessage,
   Li,
   Ul,
-  ContentWrapper,
+  ContentWrapper
   // @ts-ignore
-} from "./JorneyForm.style.jsx";
+} from "components/RegisterTravelForm/JorneyForm.style";
 import axios from "axios";
 const createUserFormSchema = z.object({
   nota_fiscal: z.coerce.number({
@@ -53,7 +53,6 @@ function JorneyForm() {
   } = useForm<createUserFormData>({
     resolver: zodResolver(createUserFormSchema),
   });
-
 
   async function createUser(data: any) {
     const url = `${process.env.REACT_APP_API_URL}/register`;

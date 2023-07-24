@@ -1,16 +1,17 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import RegisterTravel from "./pages/RegisterTravel";
-import Header from "./components/Header";
-import History from "./pages/History";
-import JorneyForm from "./components/RegisterTravelForm";
-import UserProvider from "./common/contexts/User";
-import Login from "./pages/Login";
-import Home from "./pages/Home";
-import Register from "./pages/RegisterUser";
-import { RequireAuth } from "./common/contexts/Auth/RequireAuth";
-import { AuthProvider } from "./common/contexts/Auth/AuthContext";
+import { RequireAuth } from "common/contexts/Auth/RequireAuth";
+import { AuthProvider } from "common/contexts/Auth/AuthContext";
+import UserProvider from "common/contexts/User";
+import Header from "components/Header";
+import Footer from "components/Footer";
+import RegisterTravel from "pages/RegisterTravel";
+import HistoryById from "pages/HistoryById";
+import Register from "pages/RegisterUser";
+import History from "pages/History";
+import Login from "pages/Login";
+import Home from "pages/Home";
 
 function AppRouter() {
   return (
@@ -23,7 +24,7 @@ function AppRouter() {
             <Route path="/createTravel" element={<RegisterTravel />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/historico/:_id" element={<JorneyForm />} />
+            <Route path="/historico/:_id" element={<HistoryById />} />
             <Route
               path="/historico"
               element={
@@ -35,6 +36,7 @@ function AppRouter() {
           </Routes>
         </UserProvider>
       </AuthProvider>
+      <Footer />
     </Router>
   );
 }

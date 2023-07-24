@@ -1,6 +1,6 @@
 import { memo, useContext } from "react";
-import Sidebar from "./components/SidebarMenu/index";
-import { HeaderWrapper } from "./Header.style.jsx";
+import Sidebar from "components/Header/components/SidebarMenu/";
+import { HeaderWrapper } from "components/Header/Header.style.jsx";
 import { AuthContext } from "common/contexts/Auth/AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -11,7 +11,7 @@ function Header() {
     await auth.signout();
     navigate("/");
   };
-  console.log(auth)
+  console.log(auth);
   return (
     <HeaderWrapper>
       <Sidebar />

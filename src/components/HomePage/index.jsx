@@ -9,9 +9,10 @@ import {
   HomePageWrapper,
   ProductWrapper,
   SubTittle,
-} from "./HomePage.styled";
+} from "components/HomePage/HomePage.styled";
 import { BsDatabaseFillLock, BsFillClipboard2PulseFill } from "react-icons/bs";
 import { GiTimeTrap } from "react-icons/gi";
+import { FaUsers } from "react-icons/fa";
 import {
   AiFillCalculator,
   AiFillMobile,
@@ -21,7 +22,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import TypewriterComponent from "typewriter-effect";
-import ProductCell from "./components/ProductCell/ProductCell";
+import ProductCell from "components/HomePage/components/ProductCell";
 function HomePage() {
   useEffect(() => {
     Aos.init({ duration: 500 });
@@ -88,6 +89,11 @@ function HomePage() {
                 icon={<AiFillSecurityScan size={60} />}
                 title="Privacidade e Segurança"
                 message="Garantimos a privacidade e a segurança dos seus dados, permitindo que você gerencie suas informações com tranquilidade."
+              />
+              <ProductCell
+                icon={<FaUsers size={60} />}
+                title="Suporte ao Cliente"
+                message=" Nossa equipe de suporte está pronta para ajudar, oferecendo qualquer assistência que o cliente precisar sempre que necessário."
               />
             </DisplayMany>
           </ProductWrapper>

@@ -5,10 +5,10 @@ import {
   UlHorizontal,
   UserPageContainer,
   UserPageWrapper,
-} from "../Login/LoginPage.style.";
+} from "components/Login/LoginPage.style.";
 import SVGIcon from "assets/Login/undraw_delivery_truck_vt6p.svg";
-import RegisterPainel from "./components/RegisterBoard";
-function RegisterPage() {
+import RegisterPainel from "components/Register/components";
+function RegisterUser() {
   return (
     <UserPageWrapper>
       <UserPageContainer>
@@ -27,4 +27,4 @@ function RegisterPage() {
   );
 }
 
-export default RegisterPage;
+export default RegisterUser;

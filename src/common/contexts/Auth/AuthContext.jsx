@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
-import { useApi } from "../../hooks/useApi";
+import { useApi } from "common/hooks/useApi";
+import { useLocation } from "react-router-dom";
 
 export const AuthContext = createContext(null);
 AuthContext.displayName = "Login";
@@ -7,19 +8,20 @@ AuthContext.displayName = "Login";
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const api = useApi();
+  const location = useLocation();
+  console.log(location);
 
   useEffect(() => {
-    const validateToken = async () => {
+    const validateToken = async (res) => {
       const data = await api.validateToken();
+      console.log(user);
       if (data.user) {
         setUser(data.user);
         setToken(data.token);
-      } else {
-        console.log("Não Existe", data.user);
       }
     };
     validateToken();
-  });
+  }, [location]);
 
   const signin = async (email, password) => {
     const data = await api.signin(email, password);

@@ -5,9 +5,19 @@
     "paths": {
       "assets": ["assets"],
       "common": ["common"],
-      "components": ["components"],
+      "components": [
+        "components/*",
+        "components/Footer/*",
+        "components/Header/*",
+        "components/Home/*",
+        "components/Login/*",
+        "components/Register/*",
+        "components/RegisterTravelForm/*",
+        "components/Searcher/*",
+        "components/TravelsHistory/*",
+      ],
       "interfaces": ["interfaces"],
-      "pages": ["pages"],
+      "pages": ["pages"]
     },
     /* Visit https://aka.ms/tsconfig to read more about this file */
 
@@ -114,5 +124,12 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
-  }
+  },
+  "include": [
+    "src", // Inclui todos os arquivos em src
+    "**/*.style.tsx", // Inclui todos os arquivos com extensão .style.tsx em qualquer diretório
+    "/routes.js",
+    "/index.css",
+    "/App.jsx",
+  ]
 }

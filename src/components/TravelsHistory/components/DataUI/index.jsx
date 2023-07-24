@@ -12,9 +12,9 @@
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { UserContext } from "../../../../common/contexts/User";
-import BaseLayout from "./baseLayout";
-import UpdateLayout from "./updateLayout";
+import { UserContext } from "common/contexts/User";
+import BaseLayout from "components/TravelsHistory/components/DataUI/BaseLayout";
+import UpdateLayout from "components/TravelsHistory/components/DataUI/UpdateLayout";
 import Pagination from "./Pagination";
 import SearchInput from "./SearchInput";
 import { DataUiComponnet } from "./DataUI.style";

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../App.style";
+import { colors } from "App.style";
 import TruckImage1 from "assets/Home/TruckImage1.jpg";
 
 export const HomePageWrapper = styled.div`
@@ -58,7 +58,7 @@ export const Apresentation = styled.div`
   text-indent: 5em;
   gap: 4rem;
 
-  @media (max-width: 880px) {
+  @media (max-width: 950px) {
     display: flex;
     flex-direction: column;
     width: 80% auto;
@@ -72,6 +72,7 @@ export const Apresentation = styled.div`
       order: 2;
     }
   }
+
 
   p {
     width: 50%;

@@ -6,8 +6,8 @@ import {
   UserWrapper,
   SubmitButton,
   InputContainer,
-} from "../../Login/components/LoginBoard.style";
-import { Li, Ul } from "../../HistoryContent/Components/DataUI/DataUI.style";
+} from "components/Login/components/LoginBoard.style";
+import { Li, Ul } from "components/TravelsHistory/components/DataUI/DataUI.style";
 import { BiUser } from "react-icons/bi";
 import {
   HiOutlineMail,

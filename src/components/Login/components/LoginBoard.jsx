@@ -7,9 +7,9 @@ import {
   SubmitButton,
   InputContainer,
 } from "./LoginBoard.style";
-import { Li, Ul } from "../../HistoryContent/Components/DataUI/DataUI.style";
+import { Li, Ul } from "components/TravelsHistory/components/DataUI/DataUI.style";
 import { HiOutlineMail, HiOutlineLockClosed } from "react-icons/hi";
-import { AuthContext } from "../../../common/contexts/Auth/AuthContext";
+import { AuthContext } from "common/contexts/Auth/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 function LoginPainel() {

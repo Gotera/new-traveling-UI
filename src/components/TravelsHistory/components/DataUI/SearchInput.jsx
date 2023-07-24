@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
-import useDebounce from '../../../../common/useDebounce';
-import { CustomSearchInput } from './DataUI.style';
+import { useState } from "react";
+import useDebounce from "common/useDebounce";
+import { CustomSearchInput } from "components/TravelsHistory/components/DataUI/DataUI.style";
 
 function SearchInput({ value, onChange }) {
   const [displayValue, setDisplayValue] = useState(value);

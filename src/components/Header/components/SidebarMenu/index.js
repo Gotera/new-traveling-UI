@@ -4,7 +4,7 @@ import {
   SideBarInput,
   SidebarBody,
   SidebarWrapper,
-} from "./Sidebar.style";
+} from "components/Header/components/SidebarMenu/Sidebar.style";
 import { AiOutlineHistory } from "react-icons/ai";
 import { BsFillClipboardDataFill } from "react-icons/bs";
 

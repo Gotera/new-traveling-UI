@@ -2,8 +2,12 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/button-has-type */
-import React, { useEffect, useState } from 'react';
-import { PagesButton, PaginationButton, WrapperPagination } from './DataUI.style';
+import React, { useEffect, useState } from "react";
+import {
+  PagesButton,
+  PaginationButton,
+  WrapperPagination,
+} from "components/TravelsHistory/components/DataUI/DataUI.style";
 
 const MAX_ITEMS = 9;
 const MAX_LEFT = (MAX_ITEMS - 1) / 2;
@@ -34,7 +38,7 @@ function Pagination({ totalItems, itemsPerPage, onPageChange }) {
       pageNumbers.push(
         <PagesButton
           key={i}
-          className={currentPage === i ? 'active' : ''}
+          className={currentPage === i ? "active" : ""}
           onClick={() => handlePageClick(i)}
         >
           {i}
@@ -44,15 +48,20 @@ function Pagination({ totalItems, itemsPerPage, onPageChange }) {
     return pageNumbers;
   };
 
-  return  <WrapperPagination className="pagination">
+  return (
+    <WrapperPagination className="pagination">
       <PaginationButton onClick={handlePrevClick} disabled={currentPage === 1}>
         Anterior
       </PaginationButton>
       <div className="pages">{renderPageNumbers()}</div>
-      <PaginationButton onClick={handleNextClick} disabled={currentPage === totalPages}>
+      <PaginationButton
+        onClick={handleNextClick}
+        disabled={currentPage === totalPages}
+      >
         Próxima
       </PaginationButton>
-    </WrapperPagination>;
+    </WrapperPagination>
+  );
 }
 
 export default Pagination;

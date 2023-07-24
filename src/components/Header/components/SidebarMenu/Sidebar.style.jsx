@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../../../App.style";
+import { colors } from "App.style";
 
 export const SidebarWrapper = styled.div`
   z-index: 3;
@@ -13,10 +13,8 @@ export const Label = styled.label`
   z-index: 1;
   cursor: pointer;
   visibility: visible;
-
   display: flex;
   flex-direction: column;
-
   .Bar {
     width: 40px;
     height: 5px;
