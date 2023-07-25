@@ -23,11 +23,18 @@ export const BannerHolder = styled.div`
   flex-direction: column;
   @media (max-width: 800px) {
     background-position: center;
+    font-weight: 400;
   }
 `;
 
 export const BannerTextWrapper = styled.div`
   margin: calc(50vh - 100px) 6%;
+  flex-wrap: wrap;
+  text-shadow: 10rem solid ${colors.dark};
+
+  @media (max-width: 450px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const AboutWrapper = styled.div`
@@ -46,6 +53,10 @@ export const SubTittle = styled.h2`
   margin: 2rem;
   font-family: "Poppins", sans-serif;
   color: ${colors.white};
+
+  @media (max-width: 450px) {
+    font-size: 3rem;
+  }
 `;
 
 export const Apresentation = styled.div`
@@ -58,6 +69,19 @@ export const Apresentation = styled.div`
   text-indent: 5em;
   gap: 4rem;
 
+  p {
+    width: 50%;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1.8px;
+    text-align: start;
+    color: ${colors.white};
+  }
+
+  img {
+    max-width: 100%;
+  }
+
   @media (max-width: 950px) {
     display: flex;
     flex-direction: column;
@@ -66,21 +90,12 @@ export const Apresentation = styled.div`
     p {
       width: 100%;
       order: 1;
+      text-indent: 1em;
     }
 
     img {
       order: 2;
     }
-  }
-
-
-  p {
-    width: 50%;
-    font-family: "Poppins", sans-serif;
-    font-size: 1.5rem;
-    letter-spacing: 1.8px;
-    text-align: start;
-    color: ${colors.white};
   }
 `;
 
@@ -90,7 +105,11 @@ export const ProductWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 0 5% 0 5%;
+  padding: 0 5% 5% 5%;
+
+  @media (max-width: 450px) {
+    padding: 0;
+  }
 `;
 
 export const DisplayMany = styled.div`
