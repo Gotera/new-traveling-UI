@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const api = useApi();
   const location = useLocation();
-  console.log(location);
+  console.log(location.pathname);
 
   useEffect(() => {
     const validateToken = async (res) => {
@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
       }
     };
     validateToken();
-  }, [location]);
+  }, [location.pathname]);
 
   const signin = async (email, password) => {
     const data = await api.signin(email, password);
