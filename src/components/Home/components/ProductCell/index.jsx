@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductCellWrapper, CellTop, CellBottom } from "components/HomePage/components/ProductCell/ProductCell.styled";
+import { ProductCellWrapper, CellTop, CellBottom } from "components/Home/components/ProductCell/ProductCell.styled";
 
 function ProductCell(props) {
   return (

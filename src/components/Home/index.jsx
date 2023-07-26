@@ -9,7 +9,7 @@ import {
   HomePageWrapper,
   ProductWrapper,
   SubTittle,
-} from "components/HomePage/HomePage.styled";
+} from "components/Home/Home.styled";
 import { BsDatabaseFillLock, BsFillClipboard2PulseFill } from "react-icons/bs";
 import { GiTimeTrap } from "react-icons/gi";
 import { FaUsers } from "react-icons/fa";
@@ -22,8 +22,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import TypewriterComponent from "typewriter-effect";
-import ProductCell from "components/HomePage/components/ProductCell";
-function HomePage() {
+import ProductCell from "components/Home/components/ProductCell";
+function Home() {
   useEffect(() => {
     Aos.init({ duration: 500 });
   }, []);
@@ -101,4 +101,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Home;

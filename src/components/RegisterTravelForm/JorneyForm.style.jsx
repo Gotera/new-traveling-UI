@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { colors } from "App.style";
 
 export const JorneyFormWrapper = styled.div`
+  height: calc(100vh - 100px) auto;
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
@@ -9,20 +10,22 @@ export const JorneyFormWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+
   @media (max-width: 1000px) {
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
+  }
+
+  @media (max-width: 600px) {
+    height: 0 auto;
   }
 
   form {
     margin: 1rem;
-    font-family: "Raleway";
-    font-style: normal;
-    font-weight: 700;
     margin-top: 2rem;
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
     border: 0.1px solid ${colors.grey};
-    flex-wrap: wrap;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,9 +112,7 @@ export const Button = styled.button`
   line-height: 1.25;
   margin: 0;
   margin-bottom: 2rem;
-  min-height: 3rem;
   padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
-  position: relative;
   text-decoration: none;
   transition: all 250ms;
   user-select: none;
