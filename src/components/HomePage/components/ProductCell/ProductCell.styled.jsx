@@ -5,13 +5,18 @@ export const ProductCellWrapper = styled.div`
   background-color: ${colors.white};
   padding: 1.5rem;
   border-radius: 0.8rem;
+  @media (max-width: 300px) {
+    padding: 0;
+  }
 `;
+
 export const CellTop = styled.div`
   padding: 0rem 1rem 1rem 1rem;
   color: ${colors.babyBlue};
   display: flex;
   justify-content: center;
 `;
+
 export const CellBottom = styled.div`
   width: 15rem;
   gap: 0.5rem;

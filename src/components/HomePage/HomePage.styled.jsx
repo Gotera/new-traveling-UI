@@ -46,6 +46,9 @@ export const AboutWrapper = styled.div`
   gap: 2rem;
   background-color: ${colors.babyBlue};
   padding: 0 5% 0 5%;
+  @media (max-width: 315px) {
+    padding: 0;
+  }
 `;
 
 export const SubTittle = styled.h2`
@@ -77,22 +80,18 @@ export const Apresentation = styled.div`
     text-align: start;
     color: ${colors.white};
   }
-
   img {
     max-width: 100%;
   }
-
   @media (max-width: 950px) {
     display: flex;
     flex-direction: column;
     width: 80% auto;
-
     p {
       width: 100%;
       order: 1;
       text-indent: 1em;
     }
-
     img {
       order: 2;
     }
@@ -106,9 +105,9 @@ export const ProductWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 5% 5% 5%;
-
-  @media (max-width: 450px) {
-    padding: 0;
+  @media (max-width: 350px) {
+    width: 100%;
+    padding: 5% 0;
   }
 `;
 
