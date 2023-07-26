@@ -15,9 +15,9 @@ import { useParams } from "react-router-dom";
 import { UserContext } from "common/contexts/User";
 import BaseLayout from "components/TravelsHistory/components/DataUI/BaseLayout";
 import UpdateLayout from "components/TravelsHistory/components/DataUI/UpdateLayout";
-import Pagination from "./Pagination";
-import SearchInput from "./SearchInput";
-import { DataUiComponnet } from "./DataUI.style";
+import Pagination from "components/TravelsHistory/components/DataUI/Pagination";
+import SearchInput from "components/TravelsHistory/components/DataUI/SearchInput";
+import { DataUiComponnet } from "components/TravelsHistory/components/DataUI/DataUI.style";
 
 function DataUI() {
   const itemsPerPage = 10;
