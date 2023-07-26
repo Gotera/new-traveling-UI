@@ -1,50 +1,52 @@
 import React from "react";
 import {
-  ColumLi,
-  ColumUl,
-  ColumnWrapper,
   FooterWrapper,
-  MiddleToLeft,
-  MiddleToRight,
-  SidesWrapper,
-} from "./Footer.style";
+  ImgHorizontal,
+  ColumnWrapper,
+} from "components/Footer/Footer.style";
+import HorizontalColumn from "components/Footer/components/HorizontalColumn";
 import BlueLogo3 from "assets/Home/BlueLogo3.png";
 
 function Footer() {
   return (
     <FooterWrapper>
-      <img src={BlueLogo3} id="BlueLogo" />
+      <ImgHorizontal>
+        <img src={BlueLogo3} alt="New Traveling Logo Type 3" id="BlueLogo" />
+      </ImgHorizontal>
       <ColumnWrapper>
-        <ColumUl>
-          <ColumLi>Social</ColumLi>
-          <ColumLi>Instagram</ColumLi>
-          <ColumLi>Twitter</ColumLi>
-          <ColumLi>Whatsapp</ColumLi>
-        </ColumUl>
-        <ColumUl>
-          <ColumLi>Social</ColumLi>
-          <ColumLi>Instagram</ColumLi>
-          <ColumLi>Twitter</ColumLi>
-          <ColumLi>Whatsapp</ColumLi>
-        </ColumUl>
-        <ColumUl>
-          <ColumLi>Social</ColumLi>
-          <ColumLi>Instagram</ColumLi>
-          <ColumLi>Twitter</ColumLi>
-          <ColumLi>Whatsapp</ColumLi>
-        </ColumUl>
-        <ColumUl>
-          <ColumLi>Social</ColumLi>
-          <ColumLi>Instagram</ColumLi>
-          <ColumLi>Twitter</ColumLi>
-          <ColumLi>Whatsapp</ColumLi>
-        </ColumUl>
-        <ColumUl>
-          <ColumLi>Social</ColumLi>
-          <ColumLi>Instagram</ColumLi>
-          <ColumLi>Twitter</ColumLi>
-          <ColumLi>Whatsapp</ColumLi>
-        </ColumUl>
+        <HorizontalColumn
+          items={[
+            ["Navegação"],
+            ["Home", "/"],
+            ["Login", "/login"],
+            ["Register", "/register"],
+          ]}
+        />
+        <HorizontalColumn
+          items={[
+            ["Recursos"],
+            ["Como Iniciar"],
+            ["Documentos"],
+            ["Suporte"],
+            ["Suporte de Hardware"],
+          ]}
+        />
+        <HorizontalColumn
+          items={[["Social"], ["Twitter"], ["Instagram"], ["Whatsapp"]]}
+        />
+        <HorizontalColumn
+          items={[["Empresarial"], ["Sobre Nós"], ["Blog"], ["Parceiros"]]}
+        />
+        <HorizontalColumn
+          items={[
+            ["Social"],
+            ["Twitter"],
+            ["GitHub"],
+            ["LinkedIn"],
+            ["Instagram"],
+            ["Whatsapp"],
+          ]}
+        />
       </ColumnWrapper>
     </FooterWrapper>
   );
