@@ -104,7 +104,7 @@ export const ProductWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 0 5% 5% 5%;
+  padding: 0 5% 12% 5%;
   @media (max-width: 350px) {
     width: 100%;
     padding: 5% 0;

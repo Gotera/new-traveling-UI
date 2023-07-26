@@ -3,11 +3,11 @@ import { colors } from "App.style";
 
 export const FooterWrapper = styled.div`
   background-color: ${colors.darkBlue};
-  padding: 5% 5%;
+  padding: 12% 5% 5% 5%;
   flex-wrap: wrap;
 `;
 
-export const ImgHorizontal = styled.div`
+export const ImgVertical = styled.div`
   padding: 0 0% 2.5% 5%;
   width: 100%;
   @media (max-width: 600px) {

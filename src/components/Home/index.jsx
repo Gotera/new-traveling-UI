@@ -23,6 +23,8 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import TypewriterComponent from "typewriter-effect";
 import ProductCell from "components/Home/components/ProductCell";
+import HomeBottomOverlay from "components/Home/components/HomeBottomOverlay";
+
 function Home() {
   useEffect(() => {
     Aos.init({ duration: 500 });
@@ -97,6 +99,7 @@ function Home() {
           </DisplayMany>
         </ProductWrapper>
       </AboutWrapper>
+      <HomeBottomOverlay />
     </HomePageWrapper>
   );
 }

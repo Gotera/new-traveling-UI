@@ -1,20 +1,20 @@
 import React from "react";
 import {
   FooterWrapper,
-  ImgHorizontal,
+  ImgVertical,
   ColumnWrapper,
 } from "components/Footer/Footer.style";
-import HorizontalColumn from "components/Footer/components/HorizontalColumn";
+import VerticalColumn from "components/Footer/components/VerticalColumn";
 import BlueLogo3 from "assets/Home/BlueLogo3.png";
 
 function Footer() {
   return (
     <FooterWrapper>
-      <ImgHorizontal>
+      <ImgVertical>
         <img src={BlueLogo3} alt="New Traveling Logo Type 3" id="BlueLogo" />
-      </ImgHorizontal>
+      </ImgVertical>
       <ColumnWrapper>
-        <HorizontalColumn
+        <VerticalColumn
           items={[
             ["Navegação"],
             ["Home", "/"],
@@ -25,7 +25,7 @@ function Footer() {
             ["Histórico", "/history"],
           ]}
         />
-        <HorizontalColumn
+        <VerticalColumn
           items={[
             ["Recursos"],
             ["Como Iniciar"],
@@ -34,13 +34,13 @@ function Footer() {
             ["Suporte de Hardware"],
           ]}
         />
-        <HorizontalColumn
+        <VerticalColumn
           items={[["Social"], ["Twitter"], ["Instagram"], ["Whatsapp"]]}
         />
-        <HorizontalColumn
+        <VerticalColumn
           items={[["Empresarial"], ["Sobre Nós"], ["Blog"], ["Parceiros"]]}
         />
-        <HorizontalColumn
+        <VerticalColumn
           items={[
             ["Social"],
             ["Twitter"],
