@@ -20,6 +20,9 @@ function Footer() {
             ["Home", "/"],
             ["Login", "/login"],
             ["Register", "/register"],
+            ["Painel de Controle", "/dashboard"],
+            ["Criar Viagem", "/createTravel"],
+            ["Histórico", "/history"],
           ]}
         />
         <HorizontalColumn

@@ -8,7 +8,7 @@ export const FooterWrapper = styled.div`
 `;
 
 export const ImgHorizontal = styled.div`
-  padding: 0 0% 5% 5%;
+  padding: 0 0% 2.5% 5%;
   width: 100%;
   @media (max-width: 600px) {
     display: flex;
