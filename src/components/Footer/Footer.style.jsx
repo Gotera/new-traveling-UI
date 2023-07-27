@@ -10,6 +10,9 @@ export const FooterWrapper = styled.div`
 export const ImgVertical = styled.div`
   padding: 0 0% 2.5% 5%;
   width: 100%;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   @media (max-width: 600px) {
     display: flex;
     justify-content: center;
