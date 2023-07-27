@@ -12,7 +12,7 @@ export const WhiteTechButtonWrapper = styled.div`
   background-color: transparent;
   color: ${colors.white};
   font-family: "Poppins", sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   border: 2px solid ${colors.white};
   cursor: pointer;
 

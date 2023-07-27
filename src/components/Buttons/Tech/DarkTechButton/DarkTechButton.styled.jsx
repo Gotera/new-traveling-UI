@@ -12,7 +12,7 @@ export const DarkTechButtonWrapper = styled.button`
   background-color: ${colors.darkBlue};
   color: ${colors.white};
   font-family: "Poppins", sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   border: none;
   cursor: pointer;
 
