@@ -15,4 +15,5 @@ export const colors = {
   darkGrey: "#757575",
   dark: "#0A0A0A",
   red: "#C33B49",
+  neonGreen: "#2bdfcd",
 };
