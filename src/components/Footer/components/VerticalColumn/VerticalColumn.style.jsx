@@ -13,8 +13,17 @@ export const ColumLi = styled.li`
     margin-bottom: 1rem;
     font-weight: 400;
     color: ${colors.darkGrey};
+    &:hover {
+      cursor: auto;
+      color: ${colors.darkGrey};
+    }
+  }
+  &:hover {
+    color: ${colors.neonGreen};
+    cursor: pointer;
   }
 `;
+
 export const ColumUl = styled.ul`
   display: flex;
   flex-direction: column;

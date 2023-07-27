@@ -9,6 +9,7 @@ import {
 } from "components/Footer/components/VerticalColumn/VerticalColumn.style";
 import { BiCheck } from "react-icons/bi";
 import DarkTechButton from "components/Buttons/Tech/DarkTechButton";
+import WhiteTechButton from "components/Buttons/Tech/WhiteTechButton";
 
 function HomeBottomOverlay() {
   return (
@@ -32,8 +33,9 @@ function HomeBottomOverlay() {
           </ColumLi>
         </ColumUl>
         <ColumUl>
-          <ColumLi>
+          <ColumLi id="teste">
             <DarkTechButton displayText="Registre-se" />
+            <WhiteTechButton displayText="Login" />
           </ColumLi>
         </ColumUl>
       </ContentWrapper>

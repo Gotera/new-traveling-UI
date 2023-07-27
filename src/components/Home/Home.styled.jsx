@@ -82,6 +82,9 @@ export const Apresentation = styled.div`
   }
   img {
     max-width: 100%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   @media (max-width: 950px) {
     display: flex;

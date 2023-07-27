@@ -48,11 +48,15 @@ export const ContentWrapper = styled.div`
   ); */
   ${ColumUl} {
     justify-content: center;
+    gap: 1rem;
     &:nth-child(1) {
       margin-left: 5%;
     }
     &:nth-child(2) {
       margin-right: 5%;
+      ${ColumLi}{
+        gap: 1.5rem;
+      }
     }
   }
 
@@ -63,28 +67,26 @@ export const ContentWrapper = styled.div`
     flex-direction: row;
     justify-content: space-between;
 
-    &:first-child {
-      margin-bottom: 0;
-    }
-
     &:nth-child(1) {
+      margin-bottom: 0;
       font-size: 1.5rem;
       color: ${colors.white};
     }
 
     &:nth-child(2) {
       letter-spacing: 0.2rem;
-      margin-bottom: 0;
     }
-    
+
     p {
       display: flex;
       align-items: center;
+
       &:hover {
         color: ${colors.neonGreen};
         cursor: pointer;
       }
     }
+
     &:hover {
       color: ${colors.white};
     }
