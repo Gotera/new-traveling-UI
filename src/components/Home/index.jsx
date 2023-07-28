@@ -49,7 +49,7 @@ function Home() {
       <AboutWrapper>
         <SubTittle data-aos="fade-up">Oque Fazemos</SubTittle>
         <Apresentation>
-          <img src={BlueLogo2} id="BlueLogo" data-aos="fade-right" />
+          <img src={BlueLogo2} alt="New Traveling Logo Type 2" data-aos="fade-right" />
           <p data-aos="fade-up">
             {" "}
             Nosso compromisso é registrar meticulosamente os dados de suas

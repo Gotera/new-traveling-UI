@@ -4,7 +4,6 @@ import TruckImage1 from "assets/Home/TruckImage1.jpg";
 
 export const HomePageWrapper = styled.div`
   margin: 0 auto;
-  /* max-width: 1920px; */
 `;
 
 export const BannerHolder = styled.div`
@@ -46,32 +45,36 @@ export const AboutWrapper = styled.div`
   gap: 2rem;
   background-color: ${colors.babyBlue};
   padding: 0 5% 0 5%;
-  @media (max-width: 315px) {
+  @media (max-width: 360px) {
     padding: 0;
+  }
+
+  @media (max-width: 1000px) {
+    padding-bottom: 4rem;
   }
 `;
 
 export const SubTittle = styled.h2`
   font-size: 4rem;
-  margin: 2rem;
+  margin: 2rem 0 2rem 0;
   font-family: "Poppins", sans-serif;
   color: ${colors.white};
-
   @media (max-width: 450px) {
     font-size: 3rem;
   }
 `;
 
 export const Apresentation = styled.div`
+  width: 0 auto;
+  text-indent: 5em;
+  gap: 4rem;
+  margin: 0 0.5rem 0 0.5rem;
   display: flex;
   justify-content: center;
   flex-direction: row;
   text-align: center;
   align-items: center;
-  width: 0 auto;
-  text-indent: 5em;
-  gap: 4rem;
-
+  flex-wrap: wrap;
   p {
     width: 50%;
     font-family: "Poppins", sans-serif;
@@ -80,12 +83,14 @@ export const Apresentation = styled.div`
     text-align: start;
     color: ${colors.white};
   }
+
   img {
     max-width: 100%;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
   }
+
   @media (max-width: 950px) {
     display: flex;
     flex-direction: column;
@@ -95,6 +100,7 @@ export const Apresentation = styled.div`
       order: 1;
       text-indent: 1em;
     }
+    
     img {
       order: 2;
     }
@@ -107,7 +113,7 @@ export const ProductWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 0 5% 12% 5%;
+  padding: 0 0 12% 0;
   @media (max-width: 350px) {
     width: 100%;
     padding: 5% 0;

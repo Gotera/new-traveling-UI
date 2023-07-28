@@ -93,7 +93,6 @@ export const InputContainer = styled.div`
   .React_Icon {
     z-index: 1;
     padding: 0.8rem 4px;
-    /* position: absolute; */
     color: ${colors.darkGrey};
   }
 `;

@@ -10,16 +10,17 @@ export const HomeBottomOverlayWrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  max-width: 1920px;  
+  max-width: 1920px;
   margin: 0 auto;
-  @media (max-width: 800px) {
+  @media (max-width: 600px) {
     display: none;
   }
 `;
 
 export const ContentWrapper = styled.div`
   width: 80%;
-  height: 10rem;
+  padding: 3%;
+  height: 0 auto;
   position: absolute;
   border-radius: 0.5rem;
   color: ${colors.white};
@@ -48,16 +49,27 @@ export const ContentWrapper = styled.div`
     rgba(6, 78, 167, 1) 71%,
     rgba(42, 98, 197, 1) 100%
   ); */
+
   ${ColumUl} {
-    justify-content: center;
     gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
     &:nth-child(1) {
       margin-left: 5%;
+      justify-content: start;
+
+      @media (max-width: 1000px) {
+        ${ColumLi} {
+          flex-direction: column;
+        }
+      }
     }
+
     &:nth-child(2) {
       margin-right: 5%;
-      ${ColumLi}{
+      ${ColumLi} {
         gap: 1.5rem;
+        justify-content: end;
       }
     }
   }

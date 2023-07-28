@@ -8,16 +8,21 @@ export const ProductCellWrapper = styled.div`
   @media (max-width: 300px) {
     padding: 0;
   }
-  
+
   &:hover {
     transform: translateY(-6px);
     background-color: ${colors.neonGreen};
   }
 
   &:active {
-    background-color: ${colors.babyBlue};
+    background-color: ${colors.neonGreen};
     box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-    transform: translateY(0);
+  }
+
+  @media (max-width: 993px) {
+    &:hover {
+      transform: translateY(0);
+    }
   }
 `;
 

@@ -4,24 +4,30 @@ import { colors } from "App.style";
 export const FooterWrapper = styled.div`
   background-color: ${colors.darkBlue};
   padding: 12% 5% 5% 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   flex-wrap: wrap;
+  @media (max-width: 1000px) {
+    padding: 20% 5% 5% 5%;
+  }
 `;
 
 export const ImgVertical = styled.div`
-  padding: 0 0% 2.5% 5%;
   width: 100%;
-  max-width: 1920px;  
+  max-width: 1920px;
+  padding: 0 0% 2.5% 5%;
+  user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+
   @media (max-width: 600px) {
     display: flex;
     justify-content: center;
     padding: 0 0% 5% 0;
   }
+
+  img {
+      max-width: 100%;
+  }
+
   @media (max-width: 300px) {
     img {
       display: none;
@@ -30,7 +36,7 @@ export const ImgVertical = styled.div`
 `;
 
 export const ColumnWrapper = styled.div`
-  max-width: 1920px;  
+  max-width: 1920px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

@@ -12,10 +12,6 @@ export const JorneyFormWrapper = styled.div`
   align-items: center;
   flex-wrap: wrap;
 
-  @media (max-width: 1000px) {
-    /* justify-content: flex-start; */
-  }
-
   @media (max-width: 600px) {
     height: 0 auto;
   }

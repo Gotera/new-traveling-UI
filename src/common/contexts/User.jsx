@@ -1,4 +1,3 @@
-/* eslint-disable camelcase */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable react/jsx-no-constructed-context-values */
 /* eslint-disable react/prop-types */

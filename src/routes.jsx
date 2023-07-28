@@ -1,5 +1,3 @@
-/* eslint-disable import/extensions */
-/* eslint-disable import/no-unresolved */
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { RequireAuth } from "common/contexts/Auth/RequireAuth";
 import { AuthProvider } from "common/contexts/Auth/AuthContext";
