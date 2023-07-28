@@ -10,6 +10,8 @@ export const HomeBottomOverlayWrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  max-width: 1920px;  
+  margin: 0 auto;
   @media (max-width: 800px) {
     display: none;
   }

@@ -3,6 +3,7 @@ import { colors } from "App.style";
 
 export const VerticalColumnsWrapper = styled.div`
   margin: 8px 8px 0 8px;
+  max-width: 1920px;
 `;
 
 export const ColumLi = styled.li`

@@ -4,7 +4,7 @@ import TruckImage1 from "assets/Home/TruckImage1.jpg";
 
 export const HomePageWrapper = styled.div`
   margin: 0 auto;
-  max-width: 1920px;
+  /* max-width: 1920px; */
 `;
 
 export const BannerHolder = styled.div`
